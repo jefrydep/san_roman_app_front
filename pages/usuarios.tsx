@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const usuarios = () => {
+
+  const [isactive, setIsactive] = useState(true)
+
+  const handleIsUserActove = ()=>{
+  setIsactive(!isactive)
+
+  }
   return (
     <>
       <div className=" mt-5  flex   bg-white rounded-2xl justify-a  flex-row">
@@ -53,10 +60,20 @@ const usuarios = () => {
               </td>
               <td className="border-2 px-4">Witchy Woman</td>
               <td className="border-2">The Eagles</td>
-              <td className="border-2 py-1">
-                <div className="bg-green-700 mx-3 rounded-xl text-center text-white">
-                  activo
-                </div>
+              <td className="border-2   py-1">
+
+                {isactive?    <button  className="min-w-[85px] bg-green-700 mx-3 rounded-xl text-center text-white" onClick={handleIsUserActove}>
+                 
+                  Activo
+                
+                </button>:   <button className=" min-w-[85px] bg-orange-300 mx-3 rounded-xl text-center text-white" onClick={handleIsUserActove}>
+                
+                  Inactivo
+                 
+                </button>}
+                <button onClick={handleIsUserActove}>
+                 
+                </button>
               </td>
               <td className="border-2">The Eagles</td>
               <td className="border-2">1972</td>
