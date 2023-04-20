@@ -17,16 +17,22 @@ export default function TopBar({ showNav, setShowNav }:any) {
         showNav ? "pl-56" : ""
       }`}
     >
-      <div className="pl-4 md:pl-16">
+      <div className="pl-4 flex flex-row md:pl-16">
         <Bars3CenterLeftIcon
+        
           className="h-8 w-8 text-gray-700 cursor-pointer"
           onClick={() => setShowNav(!showNav)}
         />
+        <div className="mx-4 font-bold">
+        CONSTRUCTORA E  INMOBILIARIA SAN ROMAN SAC
+        </div>
+        
       </div>
       <div className="flex items-center pr-4 md:pr-16">
         <Popover className="relative">
           <Popover.Button className="outline-none mr-5 md:mr-8 cursor-pointer text-gray-700">
             <BellIcon className="h-6 w-6" />
+         
           </Popover.Button>
           <Transition
             as={Fragment}
