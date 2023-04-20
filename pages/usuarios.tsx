@@ -1,13 +1,74 @@
+import TableWidget from "@/widgets/TableWidget";
 import React, { useState } from "react";
 
 const usuarios = () => {
+  const dataUsers = [
+    {
+      id: 1,
+      fullName: "Jefry Palomino Mayta",
+      proyecto: "Merida",
+      estado: "activo",
+      manza: "Mz-Z1",
+      precio: "S/ 20.000",
+    },
+    {
+      id: 2,
+      fullName: "Jefry Palomino Mayta",
+      proyecto: "Merida",
+      estado: "activo",
+      manza: "Mz-Z1",
+      precio: "S/ 20.000",
+    },
+    {
+      id: 3,
+      fullName: "Jefry Palomino Mayta",
+      proyecto: "Merida",
+      estado: "activo",
+      manza: "Mz-Z1",
+      precio: "S/ 20.000",
+    },
+    {
+      id: 4,
+      fullName: "Jefry Palomino Mayta",
+      proyecto: "Merida",
+      estado: "activo",
+      manza: "Mz-Z1",
+      precio: "S/ 20.000",
+    },
+    {
+      id: 5,
+      fullName: "Jefry Palomino Mayta",
+      proyecto: "Merida",
+      estado: "activo",
+      manza: "Mz-Z1",
+      precio: "S/ 20.000",
+    },
+    {
+      id: 6,
+      fullName: "Jefry Palomino Mayta",
+      proyecto: "Merida",
+      estado: "activo",
+      manza: "Mz-Z1",
+      precio: "S/ 20.000",
+    },
+    {
+      id: 7,
+      fullName: "Jefry Palomino Mayta",
+      proyecto: "Merida",
+      estado: "activo",
+      manza: "Mz-Z1",
+      precio: "S/ 20.000",
+    },
+    {
+      id: 8,
+      fullName: "Jefry Palomino Mayta",
+      proyecto: "Merida",
+      estado: "activo",
+      manza: "Mz-Z1",
+      precio: "S/ 20.000",
+    },
+  ];
 
-  const [isactive, setIsactive] = useState(true)
-
-  const handleIsUserActove = ()=>{
-  setIsactive(!isactive)
-
-  }
   return (
     <>
       <div className=" mt-5  flex   bg-white rounded-2xl justify-a  flex-row">
@@ -25,8 +86,8 @@ const usuarios = () => {
         Agregar
       </button>
 
-      <div className=" flex h-screen bg-white rounded-2xl justify-a  flex-col">
-      <table className="mx-10 my-10 pt-7 ">
+      <div className=" flex h-screen bg-white rounded-2xl flex-col">
+        <table className="mx-10 my-10 pt-7 ">
           <thead className="">
             <tr className=" border-x-2 mx-10 ">
               <th className="border p-2">N°</th>
@@ -37,62 +98,17 @@ const usuarios = () => {
               <th className="border-2">Precio</th>
             </tr>
           </thead>
-          <tbody className=" ">
-            <tr className="">
-              <td className="border-2 px-4 py-1">
-                1
-              </td>
-              <td className="border-2 px-4 py-1">
-                The d Mr. Bones (Next Stop, Pottersville)
-              </td>
-              <td className="border-2 px-4 py-1">Malcolm Lockyer</td>
-              <td className="border-2 py-1 ">
-                <div className="bg-green-700 mx-3 rounded-xl text-center text-white">
-                  activo
-                </div>
-              </td>
-              <td className="border-2">Malcolm Lockyer</td>
-              <td className="border-2">1961</td>
-            </tr>
-            <tr>
-            <td className="border-2 px-4">
-                2
-              </td>
-              <td className="border-2 px-4">Witchy Woman</td>
-              <td className="border-2">The Eagles</td>
-              <td className="border-2   py-1">
-
-                {isactive?    <button  className="min-w-[85px] bg-green-700 mx-3 rounded-xl text-center text-white" onClick={handleIsUserActove}>
-                 
-                  Activo
-                
-                </button>:   <button className=" min-w-[85px] bg-orange-300 mx-3 rounded-xl text-center text-white" onClick={handleIsUserActove}>
-                
-                  Inactivo
-                 
-                </button>}
-                <button onClick={handleIsUserActove}>
-                 
-                </button>
-              </td>
-              <td className="border-2">The Eagles</td>
-              <td className="border-2">1972</td>
-            </tr>
-            <tr>
-            <td className="border-2 px-4">
-                3
-              </td>
-              <td className="border-2 px-4">Shining Star</td>
-              <td className="border-2">Earth, Wind, and Fire</td>
-              <td className="border-2 py-1">
-                <div className="bg-green-700 rounded-xl mx-3 text-center text-white">
-                  activo
-                </div>
-              </td>
-              <td className="border-2">Earth, Wind, and Fire</td>
-              <td className="border-2">1975</td>
-            </tr>
-          </tbody>
+          {dataUsers.map((users: any) => (
+            <TableWidget
+              key={users.id}
+              number={users.id}
+              firstValue={users.fullName}
+              secondValue={users.proyecto}
+              thirthValue={users.estado}
+              fourthValue={users.manza}
+              fifthValue={users.precio}
+            />
+          ))}
         </table>
       </div>
     </>

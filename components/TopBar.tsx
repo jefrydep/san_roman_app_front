@@ -23,7 +23,7 @@ export default function TopBar({ showNav, setShowNav }:any) {
           className="h-8 w-8 text-gray-700 cursor-pointer"
           onClick={() => setShowNav(!showNav)}
         />
-        <div className="mx-4 font-bold">
+        <div className="mx-4 font-bold  ">
         CONSTRUCTORA E  INMOBILIARIA SAN ROMAN SAC
         </div>
         
