@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function TopBar({ showNav, setShowNav }:any) {
   return (
     <div
-      className={`fixed w-full h-16 flex justify-between items-center transition-all duration-[400ms] ${
+      className={`fixed w-full h-16 flex bg-white justify-between items-center transition-all duration-[400ms] ${
         showNav ? "pl-56" : ""
       }`}
     >
@@ -114,7 +114,7 @@ export default function TopBar({ showNav, setShowNav }:any) {
                 />
               </picture>
               <span className="hidden md:block font-medium text-gray-700">
-                Rettson
+            Jefry
               </span>
               <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-700" />
             </Menu.Button>
