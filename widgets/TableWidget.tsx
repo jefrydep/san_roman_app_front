@@ -28,20 +28,16 @@ const TableWidget = ({number,firstValue,secondValue,thirthValue,fourthValue,fift
                 {firstValue}
               </td>
               <td className="border-2 px-4 py-1">{secondValue}</td>
-              <td className="border-2 py-1 ">
+              <td className="border-2 ">
+                {
+                  isactive? <button onClick={handleIsUserActove} className='text-white rounded-2xl px-3 bg-green-400'>{thirthValue} </button>:
+                  <button onClick={handleIsUserActove} className='  rounded-2xl px-3 text-white bg-orange-400'>vendido</button>
+                }
+             
               
-              {isactive?<button  className="min-w-[85px] bg-blue-500 mx-3 rounded-xl text-center text-white" onClick={handleIsUserActove}>
-                 
-            {thirthValue}
-               
-               </button>:   <button className=" min-w-[85px] bg-orange-300 mx-3 rounded-xl text-center " onClick={handleIsUserActove}>
-               
-                 Inactivo
-                
-               </button>}
-                
               </td>
-              <td className="border-2">{fourthValue} </td>
+             
+              <td className="border-2 ">{fourthValue} </td>
               <td className="border-2">{fifthValue} </td>
             </tr>
             
