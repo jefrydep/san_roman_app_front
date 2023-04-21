@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Dialog,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Input,
-  Checkbox,
-} from "@material-tailwind/react";
+// import {
+//   Button,
+//   Dialog,
+//   Card,
+//   CardHeader,
+//   CardBody,
+//   CardFooter,
+//   Typography,
+//   Input,
+//   Checkbox,
+// } from "@material-tailwind/react";
 // import { AiFillFire } from "react-icons/ai";
 import Image from "next/image";
 

@@ -61,7 +61,7 @@ const usuarios = () => {
     },
     {
       id: 8,
-      fullName: "Jefry Palomino Mayta",
+      fullName: "Rol Palomino Mayta",
       proyecto: "Merida",
       estado: "activo",
       manza: "Mz-Z1",
@@ -98,7 +98,7 @@ const usuarios = () => {
               <th className="border-2">Precio</th>
             </tr>
           </thead>
-          {dataUsers.map((users: any) => (
+          {dataUsers.map((users:any) => (
             <TableWidget
               key={users.id}
               number={users.id}

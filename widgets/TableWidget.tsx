@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 export interface InputTableValues   {
     number:string,
     firstValue:string,
@@ -30,11 +30,11 @@ const TableWidget = ({number,firstValue,secondValue,thirthValue,fourthValue,fift
               <td className="border-2 px-4 py-1">{secondValue}</td>
               <td className="border-2 py-1 ">
               
-              {isactive?    <button  className="min-w-[85px] bg-green-700 mx-3 rounded-xl text-center text-white" onClick={handleIsUserActove}>
+              {isactive?<button  className="min-w-[85px] bg-blue-500 mx-3 rounded-xl text-center text-white" onClick={handleIsUserActove}>
                  
             {thirthValue}
                
-               </button>:   <button className=" min-w-[85px] bg-orange-300 mx-3 rounded-xl text-center text-white" onClick={handleIsUserActove}>
+               </button>:   <button className=" min-w-[85px] bg-orange-300 mx-3 rounded-xl text-center " onClick={handleIsUserActove}>
                
                  Inactivo
                 
