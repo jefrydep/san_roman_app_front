@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HomeIcon, CreditCardIcon, UserIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 
-const SideBar = forwardRef(({ showNav }:any, ref:any) => {
+const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const router = useRouter();
 
   return (
@@ -30,7 +30,6 @@ const SideBar = forwardRef(({ showNav }:any, ref:any) => {
           >
             <div className="mr-2">
               <HomeIcon className="h-5 w-5" />
-            
             </div>
             <div>
               <p>Home</p>
@@ -79,7 +78,6 @@ const SideBar = forwardRef(({ showNav }:any, ref:any) => {
           >
             <div className="mr-2">
               <CreditCardIcon className="h-5 w-5" />
-              
             </div>
             <div>
               <p>Ventas</p>
@@ -96,7 +94,6 @@ const SideBar = forwardRef(({ showNav }:any, ref:any) => {
           >
             <div className="mr-2">
               <CreditCardIcon className="h-5 w-5" />
-              
             </div>
             <div>
               <p>Proyectos</p>
@@ -113,13 +110,36 @@ const SideBar = forwardRef(({ showNav }:any, ref:any) => {
           >
             <div className="mr-2">
               <CreditCardIcon className="h-5 w-5" />
-              
             </div>
             <div>
               <p>Manzanas</p>
             </div>
           </div>
         </Link>
+        <div>
+          <Link href="/reportes">
+            <div
+              className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
+                router.pathname == "/reportes"
+                  ? "bg-orange-100 text-orange-500"
+                  : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+              }`}
+            >
+              <div className="mr-2">
+                <CreditCardIcon className="h-5 w-5" />
+              </div>
+              <div>
+                <p>Reportes</p>
+              </div>
+            </div>
+          </Link>
+          <div className="grid">
+            <div>reportes de ventas</div>
+            <div>reportes de compras</div>
+            <div>reportes de gastos</div>
+            <div>reportes de clientes</div>
+          </div>
+        </div>
       </div>
     </div>
   );
