@@ -1,9 +1,10 @@
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import Link from "next/link";
 import { HomeIcon, CreditCardIcon, UserIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 
 const SideBar = forwardRef(({ showNav }: any, ref: any) => {
+  const [showMenu, setShowMenu] = useState(false);
   const router = useRouter();
 
   return (
@@ -116,30 +117,50 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             </div>
           </div>
         </Link>
-        <div>
-          <Link href="/reportes">
-            <div
-              className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-                router.pathname == "/reportes"
-                  ? "bg-orange-100 text-orange-500"
-                  : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
-              }`}
-            >
-              <div className="mr-2">
-                <CreditCardIcon className="h-5 w-5" />
-              </div>
-              <div>
-                <p>Reportes</p>
-              </div>
+        <div className="grid grid-cols-1 ">
+          <div
+            onClick={() => setShowMenu(!showMenu)}
+            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer  flex items-center transition-colors ${
+              router.pathname == "/reportes"
+                ? "bg-orange-100 text-orange-500"
+                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+            }`}
+          >
+            <div className="mr-2">
+              <CreditCardIcon className="h-5 w-5" />
             </div>
-          </Link>
-          <div className="grid">
-            <div>reportes de ventas</div>
-            <div>reportes de compras</div>
-            <div>reportes de gastos</div>
-            <div>reportes de clientes</div>
+            <div>
+              <p>Reportes</p>
+            </div>
           </div>
+
+          {showMenu && (
+            <div className="grid  py-1 pr-4 mx-5 justify-end rounded">
+              <Link href="/reportes">
+                <div>de ventas</div>
+              </Link>
+              <div>de compras</div>
+              <div>de gastos</div>
+              <div>de clientes</div>
+            </div>
+          )}
         </div>
+        <Link href="/manzana">
+          <div
+            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
+              router.pathname == "/manzana"
+                ? "bg-orange-100 text-orange-500"
+                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+            }`}
+          >
+            <div className="mr-2">
+              <CreditCardIcon className="h-5 w-5" />
+            </div>
+            <div>
+              <p>Manzanas</p>
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
