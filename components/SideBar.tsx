@@ -8,15 +8,11 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const router = useRouter();
 
   return (
-    <div ref={ref} className="fixed w-56 h-full border bg-white shadow-sm">
+    <div ref={ref} className="fixed w-56 h-full border bg-[#0f172a] shadow-sm">
       <div className="flex justify-center mt-6 mb-14">
-        <picture>
-          <img
-            className="w-32 h-auto"
-            src="/ferox-transparent.png"
-            alt="company logo"
-          />
-          <h2 className="font-bold"> SAN ROMAN SAC</h2>
+        <picture className="bg-white rounded-full p-6">
+          <img className="w-32 h-auto" src="/logo.png" alt="company logo" />
+          {/* <h2 className="font-bold"> SAN ROMAN SAC</h2> */}
         </picture>
       </div>
 
@@ -117,6 +113,10 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             </div>
           </div>
         </Link>
+        
+        <Link href="/reportes">
+
+            
         <div className="grid grid-cols-1 ">
           <div
             onClick={() => setShowMenu(!showMenu)}
@@ -145,6 +145,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             </div>
           )}
         </div>
+        </Link>
         <Link href="/manzana">
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${

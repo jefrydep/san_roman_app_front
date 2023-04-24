@@ -4,15 +4,15 @@ const clientes = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className="  flex flex-col my-4 w-full bg-white rounded-2xl  ">
+      <div className="  flex flex-col my-4 w-full   bg-[#0f172a] rounded-2xl  ">
         <div className="flex">
-          <div className=" mt-5 mx-5 flex-auto   h-16 bg-orange-400 rounded-2xl  flex-row">
+          <div className=" mt-5 mx-5 flex-auto   h-16 bg-white rounded-2xl  flex-row">
             ventas
           </div>
-          <div className=" my-5 mx-5 flex-auto   h-16 bg-orange-400 rounded-2xl  flex-row">
+          <div className=" my-5 mx-5 flex-auto   h-16 bg-white rounded-2xl  flex-row">
             ventas
           </div>
-          <div className=" my-5 mx-5 flex-auto    h-16 bg-orange-400 rounded-2xl  flex-row">
+          <div className=" my-5 mx-5 flex-auto    h-16 bg-white rounded-2xl  flex-row">
             ventas
           </div>
         </div>

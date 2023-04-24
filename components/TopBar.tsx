@@ -13,17 +13,17 @@ import Link from "next/link";
 export default function TopBar({ showNav, setShowNav }:any) {
   return (
     <div
-      className={`fixed w-full h-16 flex bg-white justify-between items-center transition-all duration-[400ms] ${
+      className={`fixed w-full h-16 flex bg-[#0f172a] justify-between items-center transition-all duration-[400ms] ${
         showNav ? "pl-56" : ""
       }`}
     >
-      <div className="pl-4 flex flex-row md:pl-16">
+      <div className="pl-4 flex flex-row md:pl-16 ">
         <Bars3CenterLeftIcon
         
-          className="h-8 w-8 text-gray-700 cursor-pointer"
+          className="h-8 w-8 text-white cursor-pointer"
           onClick={() => setShowNav(!showNav)}
         />
-        <div className="mx-4 font-bold  ">
+        <div className="mx-4 font-bold text-white ">
         CONSTRUCTORA E  INMOBILIARIA SAN ROMAN SAC
         </div>
         
