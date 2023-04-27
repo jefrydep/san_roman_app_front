@@ -22,7 +22,7 @@ const proyectos = () => {
       <div className="flex gap-5 ">
         <button
           className="bg-blue-600 text-white active:bg-black hover:bg-black flex justify-center items-center gap-2
-    font-bold px-6 h-12 rounded-md shadow hover:shadow-lg outline-none focus:outline-none"
+            font-bold px-6 h-12 rounded-md shadow hover:shadow-lg outline-none focus:outline-none"
           type="button"
           onClick={() => setShowModal(true)}
         >
@@ -30,7 +30,7 @@ const proyectos = () => {
         </button>
         <button
           className="border border-blue-100  text-gray-800 hover:text-white active:bg-black hover:bg-black flex justify-center items-center gap-2
-    font-bold px-6 h-12 rounded-md hover:shadow-lg outline-none focus:outline-none"
+            font-bold px-6 h-12 rounded-md hover:shadow-lg outline-none focus:outline-none"
           type="button"
           onClick={() => setShowSecondModal(true)}
         >
@@ -43,19 +43,30 @@ const proyectos = () => {
           <div>
             <form action="">
               <div className="flex flex-row">
-
-              <input className="px-3 rounded-xl  mx-2 mt-3" type="text" placeholder="Name" />
-              <input className="px-3 rounded-xl  mx-2 mt-3" type="text" placeholder="Name" />
+                <input
+                  className="px-3 rounded-xl  mx-2 mt-3"
+                  type="text"
+                  placeholder="Name"
+                />
+                <input
+                  className="px-3 rounded-xl  mx-2 mt-3"
+                  type="text"
+                  placeholder="Name"
+                />
               </div>
-              
+
               <div className="flex flex-row">
-
-              <input className="px-3 rounded-xl  mx-2 mt-3" type="text" placeholder="Name" />
-              <input className="px-3 rounded-xl  mx-2 mt-3" type="text" placeholder="Name" />
+                <input
+                  className="px-3 rounded-xl  mx-2 mt-3"
+                  type="text"
+                  placeholder="Name"
+                />
+                <input
+                  className="px-3 rounded-xl  mx-2 mt-3"
+                  type="text"
+                  placeholder="Name"
+                />
               </div>
-              
-              
-               
             </form>
           </div>
           <button
