@@ -34,7 +34,7 @@ const data1 = [
 export default function Home() {
   return (
     <>
-      <p className="text-gray-700 text-3xl mb-16 font-bold">Dashboard</p>
+      <p className="text-gray-700 text-3xl mt-7 mb-3 font-bold">Graficos</p>
 
       <div className="grid lg:grid-cols-3 gap-5 mb-16">
         <div className="rounded bg-white h-40 shadow-sm"></div>
@@ -59,11 +59,11 @@ export default function Home() {
           </BarChart>
         </ResponsiveContainer>
         <div>
-          <LineChart width={600} height={300} data={data1}>
-            <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-            <CartesianGrid stroke="#ccc" />
-            <XAxis dataKey="name" />
-            <YAxis />
+          <LineChart width={600} height={300} data={data1}   >
+            <Line type="monotone" dataKey="uv" />
+            <CartesianGrid stroke="#ccc"  />
+            <XAxis dataKey="name"   />
+            <YAxis  />
           </LineChart>
         </div>
       </div>

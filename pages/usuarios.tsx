@@ -4,7 +4,7 @@ const usuarios = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className=" bg-gray-400 rounded-lg my-3">
+      <div className=" bg-white rounded-lg my-3">
         <h2 className="text-center py-4 font-bold text-lg text-blue-600">
           Modulo de usuarios
         </h2>
@@ -21,7 +21,7 @@ const usuarios = () => {
         <hr />
       </div>
 
-      <div className="text-center flex flex-col items-center gap-3 rounded-lg rounded-b-none  py-5 bg-gray-400 ">
+      <div className="text-center flex flex-col items-center gap-3 rounded-lg rounded-b-none  py-5 bg-white">
         {!showModal ? (
           <button
             onClick={() => {
