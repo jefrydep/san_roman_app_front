@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 
-const ventas = () => {
+const lotes = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
       <div className=" bg-gray-400 rounded-lg my-3">
         <h2 className="text-center py-4 font-bold text-lg text-blue-600">
-          Modulo de Ventas
+          Modulo de Lotes
         </h2>
         <div className="flex justify-around   py-3">
           <div className="bg-blue-500 rounded-lg text-center  px-5 mr-4  text-white font-bold text-lg">
-            <h2>Total de Ventas realizadas</h2>
+            <h2>Total de Lotes</h2>
             <div>450</div>
           </div>
           <div className="bg-blue-500 rounded-lg text-center px-5 text-white font-bold text-lg">
-            <h2>Monto Total </h2>
-            <div>S/ 4300</div>
+            <h2>Lotes disponibles</h2>
+            <div>250</div>
           </div>
         </div>
         <hr />
@@ -75,7 +75,7 @@ const ventas = () => {
                 </button>
               </div>
             </div>
-          ) }
+          )}
 
           <section className="flex  gap-3">
             <label className="text-white font-bold" htmlFor="">
@@ -93,22 +93,22 @@ const ventas = () => {
       <main>
         <div className="grid grid-cols-4  lg:grid-cols-7   px-4 h-10 gap-3 text-white font-bold bg-blue-500">
           <div className=" hidden lg:block">
-            <h2>Id</h2>
+            <h2>Projecto</h2>
           </div>
           <div className=" ">
-            <h2>Cliente</h2>
-          </div>
-          <div className="   ">
             <h2>Lote</h2>
           </div>
-          <div className="  ">
+          <div className="   ">
             <h2>Precio</h2>
           </div>
+          <div className="  ">
+            <h2>Estado</h2>
+          </div>
           <div className="   hidden lg:block ">
-            <h2>Fecha</h2>
+            <h2>Ubicacion</h2>
           </div>
           <div className="  hidden lg:block  ">
-            <h2>Importe</h2>
+            <h2>area</h2>
           </div>
           <div className="  ">
             <h2>Accciones</h2>
@@ -116,22 +116,22 @@ const ventas = () => {
         </div>
         <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-4 lg:grid-cols-7   ">
           <div className=" content-center hidden lg:grid ">
-            <h2>1</h2>
+            <h2>Tariachi</h2>
           </div>
           <div className="  grid content-center">
-            <h2>J Palomino</h2>
+            <h2>MZ-A-LT-7</h2>
           </div>
           <div className="  font-bold grid content-center ">
-            <h2 className="text-green-500">MA_LT_4</h2>
+            <h2 className="text-green-500">9.000</h2>
           </div>
           <div className="  grid content-center">
-            <h2>S/ 9000</h2>
+            <h2>DISPONIBLE</h2>
           </div>
-          <div className="bg-green-400   content-center hidden lg:grid ">
-            <h2>14/01/2023</h2>
+          <div className="   content-center hidden lg:grid ">
+            <h2> Caracoto</h2>
           </div>
-          <div className="  bg-green-400  hidden lg:grid font-bold content-center ">
-            <h2 className="text-green-500">S/ 9000</h2>
+          <div className="   hidden lg:grid font-bold content-center ">
+            <h2 className="text-green-500">250m2</h2>
           </div>
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
@@ -144,22 +144,22 @@ const ventas = () => {
         </div>
         <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-4 lg:grid-cols-7   ">
           <div className=" content-center hidden lg:grid ">
-            <h2>1</h2>
+            <h2>Tariachi</h2>
           </div>
           <div className="  grid content-center">
-            <h2>J Palomino</h2>
+            <h2>MZ-A-LT-7</h2>
           </div>
           <div className="  font-bold grid content-center ">
-            <h2 className="text-green-500">MA_LT_4</h2>
+            <h2 className="text-green-500">9.000</h2>
           </div>
           <div className="  grid content-center">
-            <h2>S/ 9000</h2>
+            <h2>DISPONIBLE</h2>
           </div>
-          <div className="bg-green-400   content-center hidden lg:grid ">
-            <h2>14/01/2023</h2>
+          <div className="    content-center hidden lg:grid ">
+            <h2> Caracoto</h2>
           </div>
-          <div className="  bg-green-400  hidden lg:grid font-bold content-center ">
-            <h2 className="text-green-500">S/ 9000</h2>
+          <div className="   hidden lg:grid font-bold content-center ">
+            <h2 className="text-green-500">250m2</h2>
           </div>
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
@@ -172,22 +172,22 @@ const ventas = () => {
         </div>
         <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-4 lg:grid-cols-7   ">
           <div className=" content-center hidden lg:grid ">
-            <h2>1</h2>
+            <h2>Tariachi</h2>
           </div>
           <div className="  grid content-center">
-            <h2>J Palomino</h2>
+            <h2>MZ-A-LT-7</h2>
           </div>
           <div className="  font-bold grid content-center ">
-            <h2 className="text-green-500">MA_LT_4</h2>
+            <h2 className="text-green-500">9.000</h2>
           </div>
           <div className="  grid content-center">
-            <h2>S/ 9000</h2>
+            <h2>DISPONIBLE</h2>
           </div>
-          <div className="bg-green-400   content-center hidden lg:grid ">
-            <h2>14/01/2023</h2>
+          <div className="   content-center hidden lg:grid ">
+            <h2> Caracoto</h2>
           </div>
-          <div className="  bg-green-400  hidden lg:grid font-bold content-center ">
-            <h2 className="text-green-500">S/ 9000</h2>
+          <div className="   hidden lg:grid font-bold content-center ">
+            <h2 className="text-green-500">250m2</h2>
           </div>
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
@@ -198,12 +198,10 @@ const ventas = () => {
             </div>
           </div>
         </div>
-         
-      
-       
+        
       </main>
     </>
   );
 };
 
-export default ventas;
+export default lotes;
