@@ -139,7 +139,8 @@ const lotes = () => {
             </div>
             <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
               U
-            </div>
+            </div> 
+    
           </div>
         </div>
         <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-4 lg:grid-cols-7   ">
