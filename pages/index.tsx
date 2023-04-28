@@ -41,7 +41,7 @@ export default function Home() {
         <div className="rounded bg-white h-40 shadow-sm"></div>
         <div className="rounded bg-white h-40 shadow-sm"></div>
       </div>
-      <div className="grid grid-cols-1 bg-white  shadow-sm">
+      <div className="grid grid-cols-1 sm:grid-cols-2 bg-white  shadow-sm">
         <ResponsiveContainer width="" height="" aspect={2}>
           <BarChart
             data={data}
@@ -59,7 +59,7 @@ export default function Home() {
           </BarChart>
         </ResponsiveContainer>
         <div>
-          <LineChart width={300} height={150} data={data1}   >
+          <LineChart width={300} className="w-64"  height={150} data={data1}   >
             <Line type="monotone" dataKey="uv" />
             <CartesianGrid stroke="#ccc"  />
             <XAxis dataKey="name"   />
