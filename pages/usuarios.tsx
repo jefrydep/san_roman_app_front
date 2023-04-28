@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const usuarios = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className=" bg-gray-400 ">
+      <div className=" bg-gray-400 rounded-lg my-3">
         <h2 className="text-center py-4 font-bold text-lg text-blue-600">
           Modulo de usuarios
         </h2>
@@ -20,19 +21,72 @@ const usuarios = () => {
         <hr />
       </div>
 
-      <div className="text-center flex flex-col items-center gap-3   py-5 bg-gray-400 ">
-        <button className="rounded-lg    text-white font-bold  px-2 py-1 bg-blue-500 ">
-          Agregar
-        </button>
-        <form className="  flex gap-3  " action="">
-          <label className="text-white font-bold" htmlFor="">
-            Buscar:
-          </label>
-          <input
-            className="px-3 py-1 rounded-md outline-none  w-64  "
-            type="text"
-            placeholder="Jefry Palomino"
-          />
+      <div className="text-center flex flex-col items-center gap-3 rounded-lg rounded-b-none  py-5 bg-gray-400 ">
+        {!showModal ? (
+          <button
+            onClick={() => {
+              setShowModal(true);
+            }}
+            className="rounded-lg    text-white font-bold  px-2 py-1 bg-blue-500 "
+          >
+            Agregar
+          </button>
+        ) : null}
+
+        <form className="  flex flex-col  gap-3  " action="">
+          {showModal && (
+            <div className="flex flex-col   items-center gap-2">
+              <input
+                className="px-3 py-1 rounded-2xl outline-none  w-64  "
+                type="text"
+                placeholder="Jefry Palomino"
+              />
+              <input
+                className="px-3 py-1 rounded-2xl outline-none  w-64  "
+                type="text"
+                placeholder="Jefry Palomino"
+              />
+              <input
+                className="px-3 py-1 rounded-2xl outline-none  w-64  "
+                type="text"
+                placeholder="Jefry Palomino"
+              />
+              <input
+                className="px-3 py-1 rounded-2xl outline-none  w-64  "
+                type="text"
+                placeholder="Jefry Palomino"
+              />
+              <div>
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                  }}
+                  className="bg-orange-400 rounded-2xl text-white font-bold px-3 mx-4"
+                >
+                  Enviar
+                </button>
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                  }}
+                  className="bg-orange-400 rounded-2xl text-white font-bold px-3 mx-4"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </div>
+          ) }
+
+          <section className="flex gap3">
+            <label className="text-white font-bold" htmlFor="">
+              Buscar:
+            </label>
+            <input
+              className="px-3 py-1 rounded-md outline-none  w-64  "
+              type="text"
+              placeholder="Jefry Palomino"
+            />
+          </section>
         </form>
       </div>
 
