@@ -113,7 +113,7 @@ const usuarios = () => {
             <h2>1</h2>
           </div>
           <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
+            <h2>Rosi-Mami</h2>
           </div>
           <div className="col-span-2 hidden sm:grid font-bold content-center ">
             <h2 className="text-green-500">Activo</h2>
