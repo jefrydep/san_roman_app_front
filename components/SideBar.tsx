@@ -8,7 +8,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const router = useRouter();
 
   return (
-    <div ref={ref} className="fixed w-56 h-full border bg-[#0f172a] shadow-sm">
+    <div ref={ref} className="fixed w-56 h-full scroll-smooth border bg-[#0f172a] shadow-sm">
       <div className="flex justify-center mt-6 mb-14">
         <picture className="bg-white rounded-full p-6">
           <img className="w-32 h-auto" src="/logo.png" alt="company logo" />
