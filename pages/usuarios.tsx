@@ -9,11 +9,11 @@ const usuarios = () => {
           Modulo de usuarios
         </h2>
         <div className="flex justify-around   py-3">
-          <div className="bg-blue-500 rounded-lg text-center  px-5 mr-4  text-white font-bold text-lg">
+          <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-lg text-center  px-5 mr-4  text-white font-bold text-lg">
             <h2>Total de usuarios</h2>
             <div>45</div>
           </div>
-          <div className="bg-blue-500 rounded-lg text-center px-5 text-white font-bold text-lg">
+          <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-lg text-center px-5 text-white font-bold text-lg">
             <h2> Total de usuarios activos </h2>
             <div>43</div>
           </div>
@@ -27,14 +27,76 @@ const usuarios = () => {
             onClick={() => {
               setShowModal(true);
             }}
-            className="rounded-lg    text-white font-bold  px-2 py-1 bg-blue-500 "
+            className="rounded-lg    text-white font-bold  px-2 py-1 bg-gradient-to-r from-violet-600 to-indigo-600"
           >
             Agregar
           </button>
         ) : null}
 
+        {/* vamos a centrar  un modal con css */}
+
+        {showModal && (
+          <div className=" fixed left-0 top-0  flex     items-center justify-center bg-opacity-75  bg-gray-300 h-full w-full overflow-y-auto overflow-x-hidden outline-none">
+            {/* <div className="absolute bg-red-500     top-1/2 left-1/2 grid grid-cols-1 h-max w-max">
+    <input className="p-2 m-2" type="text"  placeholder="your name here"/>
+    <input className="p-2 m-2" type="text"  placeholder="your name here"/>
+    <input className="p-2 m-2" type="text"  placeholder="your name here"/>
+    
+  </div> */}
+
+            <div className="flex  bg-white rounded-md   px-6 py-6   flex-col  shadow-xl   gap-2">
+              <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                Username
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                
+                type="text"
+                placeholder="Usuarios"
+              />
+              <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                Dni
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                
+                type="text"
+                placeholder="Dni"
+              />
+              <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                Contraseña
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                
+                type="text"
+                placeholder="Contraseña"
+              />
+               
+              <div className="flex gap-4 justify-center mt-4">
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                  }}
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                >
+                  Cancelar
+                </button>
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                  }}
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         <form className="  flex flex-col  gap-3  " action="">
-          {showModal && (
+          {/* {showModal && (
             <div className="flex flex-col   items-center gap-2">
               <input
                 className="px-3 py-1 rounded-2xl outline-none  w-64  "
@@ -75,7 +137,7 @@ const usuarios = () => {
                 </button>
               </div>
             </div>
-          ) }
+          ) } */}
 
           <section className="flex gap3">
             <label className="text-white font-bold" htmlFor="">
@@ -91,7 +153,7 @@ const usuarios = () => {
       </div>
 
       <main>
-        <div className="grid grid-cols-7  sm:grid-cols-9 px-4 h-10 gap-3 text-white font-bold bg-blue-500">
+        <div className="grid grid-cols-7  sm:grid-cols-9 px-4 h-10 gap-3 text-white font-bold bg-gradient-to-r from-violet-600 to-indigo-600">
           <div className="  ">
             <h2>Id</h2>
           </div>
