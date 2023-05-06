@@ -27,7 +27,7 @@ const usuarios = () => {
             onClick={() => {
               setShowModal(true);
             }}
-            className="rounded-lg    text-white font-bold  px-2 py-1 bg-gradient-to-r from-violet-600 to-indigo-600"
+            className="flex  justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Agregar
           </button>
@@ -36,7 +36,7 @@ const usuarios = () => {
         {/* vamos a centrar  un modal con css */}
 
         {showModal && (
-          <div className=" fixed left-0 top-0  flex     items-center justify-center bg-opacity-75  bg-gray-300 h-full w-full overflow-y-auto overflow-x-hidden outline-none">
+          <div className=" fixed   left-0 top-0  flex     items-center justify-center bg-opacity-75  bg-gray-300 h-full w-full overflow-y-auto overflow-x-hidden outline-none">
             {/* <div className="absolute bg-red-500     top-1/2 left-1/2 grid grid-cols-1 h-max w-max">
     <input className="p-2 m-2" type="text"  placeholder="your name here"/>
     <input className="p-2 m-2" type="text"  placeholder="your name here"/>
@@ -44,7 +44,7 @@ const usuarios = () => {
     
   </div> */}
 
-            <div className="flex  bg-white rounded-md   px-6 py-6   flex-col  shadow-xl   gap-2">
+            <div className="flex   transition-shadow bg-white rounded-md   px-6 py-6   flex-col  shadow-xl   gap-2">
               <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                 Username
               </label>
