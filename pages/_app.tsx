@@ -7,7 +7,7 @@ import { useContext, useState } from 'react'
 export default function App({ Component, pageProps }: AppProps) {
 
   // const { isLoggedIn, user } = useContext(AuthContext)
-const [isLogged, seTisLogged] = useState(false)
+const [isLogged, seTisLogged] = useState(true)
 
   if(!isLogged){
     return <LoginPage />
