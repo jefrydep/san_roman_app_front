@@ -45,40 +45,40 @@ const usuarios = () => {
   </div> */}
 
             <div className="flex   transition-shadow bg-white rounded-md   px-6 py-6   flex-col  shadow-xl   gap-2">
+              <h3>Crear Usuario</h3>
               <label className="block text-start text-gray-700 text-sm font-bold mb-2">
-                Username
+                Usuario
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                
+                className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
-                placeholder="Usuarios"
+                placeholder="Jefry Palomino"
               />
               <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                 Dni
               </label>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                
                 type="text"
-                placeholder="Dni"
+                placeholder="75894565"
               />
               <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                 Contraseña
               </label>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                
-                type="text"
-                placeholder="Contraseña"
+                type="password"
+                placeholder="************"
+              
               />
-               
+
               <div className="flex gap-4 justify-center mt-4">
                 <button
                   onClick={() => {
                     setShowModal(false);
                   }}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  type="button"
                 >
                   Cancelar
                 </button>
@@ -86,7 +86,8 @@ const usuarios = () => {
                   onClick={() => {
                     setShowModal(false);
                   }}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  type="button"
                 >
                   Enviar
                 </button>
@@ -153,37 +154,37 @@ const usuarios = () => {
       </div>
 
       <main>
-        <div className="grid grid-cols-7  sm:grid-cols-9 px-4 h-10 gap-3 text-white font-bold bg-gradient-to-r from-violet-600 to-indigo-600">
+        <div className="grid grid-cols-5   px-4 h-10 gap-3 text-white font-bold bg-gradient-to-r from-violet-600 to-indigo-600">
           <div className="  ">
             <h2>Id</h2>
           </div>
-          <div className="col-span-2">
+          <div className=" ">
             <h2>Nombre</h2>
           </div>
-          <div className="col-span-2 hidden sm:block">
+          <div className="  hidden sm:block">
             <h2>Estatus</h2>
           </div>
-          <div className="col-span-2  ">
+          <div className="  ">
             <h2>Rol</h2>
           </div>
-          <div className="col-span-2 ">
+          <div className="  ">
             <h2>Acciones</h2>
           </div>
         </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
+        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
           <div className="grid content-center">
             <h2>1</h2>
           </div>
-          <div className="col-span-2 grid content-center">
+          <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
+          <div className=" hidden sm:grid font-bold content-center ">
             <h2 className="text-green-500">Activo</h2>
           </div>
-          <div className="col-span-2  grid content-center">
+          <div className="   grid content-center">
             <h2>Admin</h2>
           </div>
-          <div className="col-span-2 flex gap-1  ">
+          <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
               D
             </div>
@@ -192,20 +193,20 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
+        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
           <div className="grid content-center">
             <h2>1</h2>
           </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
           </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
+          <div className=" hidden sm:grid font-bold content-center ">
             <h2 className="text-green-500">Activo</h2>
           </div>
-          <div className="col-span-2  grid content-center">
+          <div className="   grid content-center">
             <h2>Admin</h2>
           </div>
-          <div className="col-span-2 flex gap-1  ">
+          <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
               D
             </div>
@@ -214,20 +215,20 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
+        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
           <div className="grid content-center">
             <h2>1</h2>
           </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
           </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
+          <div className=" hidden sm:grid font-bold content-center ">
             <h2 className="text-green-500">Activo</h2>
           </div>
-          <div className="col-span-2  grid content-center">
+          <div className="   grid content-center">
             <h2>Admin</h2>
           </div>
-          <div className="col-span-2 flex gap-1  ">
+          <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
               D
             </div>
@@ -236,20 +237,20 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
+        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
           <div className="grid content-center">
             <h2>1</h2>
           </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
           </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
+          <div className=" hidden sm:grid font-bold content-center ">
             <h2 className="text-green-500">Activo</h2>
           </div>
-          <div className="col-span-2  grid content-center">
+          <div className="   grid content-center">
             <h2>Admin</h2>
           </div>
-          <div className="col-span-2 flex gap-1  ">
+          <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
               D
             </div>
@@ -258,182 +259,8 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="col-span-2  grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="col-span-2 flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="col-span-2  grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="col-span-2 flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="col-span-2  grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="col-span-2 flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="col-span-2  grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="col-span-2 flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="col-span-2  grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="col-span-2 flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="col-span-2  grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="col-span-2 flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="col-span-2  grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="col-span-2 flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-7 sm:grid-cols-9 ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="col-span-2 grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="col-span-2 hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="col-span-2  grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="col-span-2 flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
+        
+       
       </main>
     </>
   );
