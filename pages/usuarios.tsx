@@ -1,7 +1,26 @@
-import React, { useState } from "react";
+import DescribeUser from "@/components/users/DescribeUser";
+import { UsersResponse } from "@/userResponseInterface";
+import axios from "axios";
+import { url } from "inspector";
+import { useEffect, useState } from "react";
 
 const usuarios = () => {
   const [showModal, setShowModal] = useState(false);
+  const [users, setUsers] = useState([]);
+  const TOKEN =
+    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudE51bWJlciI6IjY3NTAyOTc5IiwiaWF0IjoxNjgxNTc2ODc4LCJleHAiOjE2ODE1ODQwNzh9.FAmaicqIFFax9yzSJLsxhlz225uELWuVr4VTeD8oqbg";
+  const URL = "http://localhost:3000/api/auth/";
+
+  const getAllUser =   () => {
+    const response = axios
+      .get(URL)
+      .then((resp) => setUsers(resp.data))
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    getAllUser();
+  }, []);
+  console.log(users);
   return (
     <>
       <div className=" bg-white rounded-lg my-3">
@@ -36,7 +55,7 @@ const usuarios = () => {
         {/* vamos a centrar  un modal con css */}
 
         {showModal && (
-          <div className=" fixed   left-0 top-0  flex     items-center justify-center bg-opacity-75  bg-gray-300 h-full w-full overflow-y-auto overflow-x-hidden outline-none">
+          <div className=" fixed   left-0 top-0  flex     items-center justify-center bg-opacity-90  bg-gray-300 h-full w-full overflow-y-auto overflow-x-hidden outline-none">
             {/* <div className="absolute bg-red-500     top-1/2 left-1/2 grid grid-cols-1 h-max w-max">
     <input className="p-2 m-2" type="text"  placeholder="your name here"/>
     <input className="p-2 m-2" type="text"  placeholder="your name here"/>
@@ -69,7 +88,6 @@ const usuarios = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="password"
                 placeholder="************"
-              
               />
 
               <div className="flex gap-4 justify-center mt-4">
@@ -171,7 +189,7 @@ const usuarios = () => {
             <h2>Acciones</h2>
           </div>
         </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
+        {/* <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
           <div className="grid content-center">
             <h2>1</h2>
           </div>
@@ -192,75 +210,15 @@ const usuarios = () => {
               U
             </div>
           </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Rosi-Mami</h2>
-          </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="   grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Rosi-Mami</h2>
-          </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="   grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Rosi-Mami</h2>
-          </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="   grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
+        </div> */}
+        {
+          
+          users.map((users:UsersResponse,index)=>(
+            
+            <DescribeUser key={users.id} id={index+1} name={users.fullName} state={users.isActive === true? "Activo":'Inactivo'} role={users.role[0]}/>
+          ))
+        }
         
-       
       </main>
     </>
   );
