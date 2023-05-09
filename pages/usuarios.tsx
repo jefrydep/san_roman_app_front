@@ -1,6 +1,7 @@
 import DescribeUser from "@/components/users/DescribeUser";
 import { UsersResponse } from "@/userResponseInterface";
 import axios from "axios";
+import { Formik, Field, Form } from "formik";
 import { url } from "inspector";
 import { useEffect, useState } from "react";
 
@@ -11,7 +12,7 @@ const usuarios = () => {
     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudE51bWJlciI6IjY3NTAyOTc5IiwiaWF0IjoxNjgxNTc2ODc4LCJleHAiOjE2ODE1ODQwNzh9.FAmaicqIFFax9yzSJLsxhlz225uELWuVr4VTeD8oqbg";
   const URL = "http://localhost:3000/api/auth/";
 
-  const getAllUser =   () => {
+  const getAllUser = () => {
     const response = axios
       .get(URL)
       .then((resp) => setUsers(resp.data))
@@ -20,7 +21,24 @@ const usuarios = () => {
   useEffect(() => {
     getAllUser();
   }, []);
-  console.log(users);
+  // console.log(users);
+  interface MyFormValues {
+    userName: string;
+    dni: string;
+    password: string;
+  }
+  const onSubmit = (
+    // { userName, dni, password }: MyFormValues,
+    values:MyFormValues
+    // { resetform }: any
+  ) => {
+    // resetform();
+    // if( values  isEmpt)return;
+    
+    setShowModal(false)
+    // console.log({ userName, dni, password });
+    console.log({  values });
+  };
   return (
     <>
       <div className=" bg-white rounded-lg my-3">
@@ -56,39 +74,66 @@ const usuarios = () => {
 
         {showModal && (
           <div className=" fixed   left-0 top-0  flex     items-center justify-center bg-opacity-90  bg-gray-300 h-full w-full overflow-y-auto overflow-x-hidden outline-none">
-            {/* <div className="absolute bg-red-500     top-1/2 left-1/2 grid grid-cols-1 h-max w-max">
-    <input className="p-2 m-2" type="text"  placeholder="your name here"/>
-    <input className="p-2 m-2" type="text"  placeholder="your name here"/>
-    <input className="p-2 m-2" type="text"  placeholder="your name here"/>
-    
-  </div> */}
-
-            <div className="flex   transition-shadow bg-white rounded-md   px-6 py-6   flex-col  shadow-xl   gap-2">
+            <div className="  transition-shadow bg-white rounded-md   px-6 py-6     shadow-xl  ">
               <h3>Crear Usuario</h3>
-              <label className="block text-start text-gray-700 text-sm font-bold mb-2">
-                Usuario
-              </label>
-              <input
+              <Formik
+              
+                initialValues={{
+                  userName: "",
+                  dni: "",
+                  password: "",
+                }}
+                onSubmit={onSubmit}
+              >
+                <Form className="flex flex-col gap-2">
+                  <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                    Usuario
+                  </label>
+                  <Field
+                    className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    name="userName"
+                    placeholder="Jefry Palomino"
+                  />
+                   <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                    Dni
+                  </label>
+                  <Field
+                    className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    name="dni"
+                    placeholder="78459865"
+                  />
+                    <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                    Contraseña
+                  </label>
+                  <Field
+                    className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="password"
+                    name="password"
+                    placeholder="************"
+                  />
+                  {/* <input
                 className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Jefry Palomino"
-              />
-              <label className="block text-start text-gray-700 text-sm font-bold mb-2">
-                Dni
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                type="text"
-                placeholder="75894565"
-              />
-              <label className="block text-start text-gray-700 text-sm font-bold mb-2">
-                Contraseña
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                type="password"
-                placeholder="************"
-              />
+                /> */}
+                  {/* <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                    Dni
+                  </label>
+                  <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="75894565"
+                  />
+                  <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                    Contraseña
+                  </label>
+                  <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="password"
+                    placeholder="************"
+                  /> */}
 
               <div className="flex gap-4 justify-center mt-4">
                 <button
@@ -97,19 +142,21 @@ const usuarios = () => {
                   }}
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
-                >
+                  >
                   Cancelar
                 </button>
                 <button
-                  onClick={() => {
-                    setShowModal(false);
-                  }}
+                  // onClick={() => {
+                  //   setShowModal(false);
+                  // }}
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="button"
-                >
+                  type="submit"
+                  >
                   Enviar
                 </button>
               </div>
+                    </Form>
+                  </Formik>
             </div>
           </div>
         )}
@@ -211,14 +258,15 @@ const usuarios = () => {
             </div>
           </div>
         </div> */}
-        {
-          
-          users.map((users:UsersResponse,index)=>(
-            
-            <DescribeUser key={users.id} id={index+1} name={users.fullName} state={users.isActive === true? "Activo":'Inactivo'} role={users.role[0]}/>
-          ))
-        }
-        
+        {users.map((users: UsersResponse, index) => (
+          <DescribeUser
+            key={users.id}
+            id={index + 1}
+            name={users.fullName}
+            state={users.isActive === true ? "Activo" : "Inactivo"}
+            role={users.role[0]}
+          />
+        ))}
       </main>
     </>
   );
