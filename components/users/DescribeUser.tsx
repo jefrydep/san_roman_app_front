@@ -9,8 +9,8 @@ import React from "react";
 const DescribeUser = ({id,name,state,role}:UserProps) => {
   return (
     <>
-      <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
-        <div className="grid content-center">
+      <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-3 sm:grid-cols-5  ">
+        <div className=" hidden sm:grid content-center">
           <h2>{id} </h2>
         </div>
         <div className="  grid content-center">
@@ -22,11 +22,11 @@ const DescribeUser = ({id,name,state,role}:UserProps) => {
         <div className="   grid content-center">
           <h2>{role}</h2>
         </div>
-        <div className="  flex gap-1  ">
+        <div className="  flex gap-3 content-center self-center   ">
           <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
             D
           </div>
-          <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
+          <div className="bg-green-500 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
             U
           </div>
         </div>

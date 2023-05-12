@@ -46,11 +46,11 @@ const usuarios = () => {
           Modulo de usuarios
         </h2>
         <div className="flex justify-around   py-3">
-          <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-lg text-center  px-5 mr-4  text-white font-bold text-lg">
+          <div className="bg-[#FFC02E] rounded-lg text-center  shadow-md px-5 mr-4  text-white font-bold text-lg">
             <h2>Total de usuarios</h2>
             <div>45</div>
           </div>
-          <div className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-lg text-center px-5 text-white font-bold text-lg">
+          <div className="bg-[#FFC02E] rounded-lg text-center shadow-md px-5 text-white font-bold text-lg">
             <h2> Total de usuarios activos </h2>
             <div>43</div>
           </div>
@@ -219,24 +219,24 @@ const usuarios = () => {
       </div>
 
       <main>
-        <div className="grid grid-cols-5   px-4 h-10 gap-3 text-white font-bold bg-gradient-to-r from-violet-600 to-indigo-600">
-          <div className="  ">
-            <h2>Id</h2>
+        <div className="grid grid-cols-3 sm:grid-cols-5 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
+          <div className=" hidden sm:block ">
+            <h2 className="">Id</h2>
           </div>
-          <div className=" ">
+          <div className="">
             <h2>Nombre</h2>
           </div>
           <div className="  hidden sm:block">
             <h2>Estatus</h2>
           </div>
-          <div className="  ">
+          <div className="">
             <h2>Rol</h2>
           </div>
-          <div className="  ">
+          <div className="">
             <h2>Acciones</h2>
           </div>
         </div>
-        {/* <div className=" px-4 grid bg-white     border gap-3 py-3 grid-cols-5   ">
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
           <div className="grid content-center">
             <h2>1</h2>
           </div>
@@ -257,7 +257,161 @@ const usuarios = () => {
               U
             </div>
           </div>
-        </div> */}
+        </div>
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
+          <div className="grid content-center">
+            <h2>1</h2>
+          </div>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
+          </div>
+          <div className=" hidden sm:grid font-bold content-center ">
+            <h2 className="text-green-500">Activo</h2>
+          </div>
+          <div className="   grid content-center">
+            <h2>Admin</h2>
+          </div>
+          <div className="  flex gap-1  ">
+            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
+              D
+            </div>
+            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
+              U
+            </div>
+          </div>
+        </div>
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
+          <div className="grid content-center">
+            <h2>1</h2>
+          </div>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
+          </div>
+          <div className=" hidden sm:grid font-bold content-center ">
+            <h2 className="text-green-500">Activo</h2>
+          </div>
+          <div className="   grid content-center">
+            <h2>Admin</h2>
+          </div>
+          <div className="  flex gap-1  ">
+            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
+              D
+            </div>
+            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
+              U
+            </div>
+          </div>
+        </div>
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
+          <div className="grid content-center">
+            <h2>1</h2>
+          </div>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
+          </div>
+          <div className=" hidden sm:grid font-bold content-center ">
+            <h2 className="text-green-500">Activo</h2>
+          </div>
+          <div className="   grid content-center">
+            <h2>Admin</h2>
+          </div>
+          <div className="  flex gap-1  ">
+            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
+              D
+            </div>
+            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
+              U
+            </div>
+          </div>
+        </div>
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
+          <div className="grid content-center">
+            <h2>1</h2>
+          </div>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
+          </div>
+          <div className=" hidden sm:grid font-bold content-center ">
+            <h2 className="text-green-500">Activo</h2>
+          </div>
+          <div className="   grid content-center">
+            <h2>Admin</h2>
+          </div>
+          <div className="  flex gap-1  ">
+            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
+              D
+            </div>
+            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
+              U
+            </div>
+          </div>
+        </div>
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
+          <div className="grid content-center">
+            <h2>1</h2>
+          </div>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
+          </div>
+          <div className=" hidden sm:grid font-bold content-center ">
+            <h2 className="text-green-500">Activo</h2>
+          </div>
+          <div className="   grid content-center">
+            <h2>Admin</h2>
+          </div>
+          <div className="  flex gap-1  ">
+            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
+              D
+            </div>
+            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
+              U
+            </div>
+          </div>
+        </div>
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
+          <div className="grid content-center">
+            <h2>1</h2>
+          </div>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
+          </div>
+          <div className=" hidden sm:grid font-bold content-center ">
+            <h2 className="text-green-500">Activo</h2>
+          </div>
+          <div className="   grid content-center">
+            <h2>Admin</h2>
+          </div>
+          <div className="  flex gap-1  ">
+            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
+              D
+            </div>
+            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
+              U
+            </div>
+          </div>
+        </div>
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
+          <div className="grid content-center">
+            <h2>1</h2>
+          </div>
+          <div className="  grid content-center">
+            <h2>Rosi-Mami</h2>
+          </div>
+          <div className=" hidden sm:grid font-bold content-center ">
+            <h2 className="text-green-500">Activo</h2>
+          </div>
+          <div className="   grid content-center">
+            <h2>Admin</h2>
+          </div>
+          <div className="  flex gap-1  ">
+            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
+              D
+            </div>
+            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
+              U
+            </div>
+          </div>
+        </div>
         {users.map((users: UsersResponse, index) => (
           <DescribeUser
             key={users.id}

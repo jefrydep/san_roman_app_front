@@ -8,7 +8,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const router = useRouter();
 
   return (
-    <div ref={ref} className="fixed w-56 h-full scroll-smooth border bg-gradient-to-r from-blue-800 to-indigo-900  shadow-sm">
+    <div ref={ref} className="fixed w-56 h-full scroll-smooth border bg-[#17286B]  shadow-sm">
       <div className="flex justify-center mt-6 mb-14">
         <picture className="bg-white rounded-full p-6">
           <img className="w-32 h-auto" src="/logo.png" alt="company logo" />
@@ -21,8 +21,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               router.pathname == "/"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+              ? "bg-[#697DB3] text-white"
+                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
             }`}
           >
             <div className="mr-2">
@@ -37,8 +37,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               router.pathname == "/usuarios"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+                ? "bg-[#697DB3] text-white"
+                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
             }`}
           >
             <div className="mr-2">
@@ -53,8 +53,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               router.pathname == "/clientes"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+              ? "bg-[#697DB3] text-white"
+                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
             }`}
           >
             <div className="mr-2">
@@ -69,8 +69,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               router.pathname == "/ventas"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+              ? "bg-[#697DB3] text-white"
+                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
             }`}
           >
             <div className="mr-2">
@@ -85,8 +85,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               router.pathname == "/proyectos"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+              ? "bg-[#697DB3] text-white"
+                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
             }`}
           >
             <div className="mr-2">
@@ -101,8 +101,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               router.pathname == "/Lotes"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+              ? "bg-[#697DB3] text-white"
+                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
             }`}
           >
             <div className="mr-2">
@@ -117,8 +117,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               router.pathname == "/manzana"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+              ? "bg-[#697DB3] text-white"
+              : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
             }`}
           >
             <div className="mr-2">
@@ -133,8 +133,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
               router.pathname == "/gastos"
-                ? "bg-orange-100 text-orange-500"
-                : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+              ? "bg-[#697DB3] text-white"
+                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
             }`}
           >
             <div className="mr-2">
@@ -152,8 +152,8 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
               onClick={() => setShowMenu(!showMenu)}
               className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer  flex items-center transition-colors ${
                 router.pathname == "/reportes"
-                  ? "bg-orange-100 text-orange-500"
-                  : "text-gray-400 hover:bg-orange-100 hover:text-orange-500"
+                ? "bg-[#697DB3] text-white"
+                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
               }`}
             >
               <div className="mr-2">

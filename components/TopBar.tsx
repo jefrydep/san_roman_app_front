@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function TopBar({ showNav, setShowNav }:any) {
   return (
     <div
-      className={`fixed w-full h-16 flex  bg-gradient-to-r from-blue-800 to-indigo-900  justify-between items-center transition-all duration-[400ms] ${
+      className={`fixed w-full h-16 flex  bg-[#17286B] justify-between items-center transition-all duration-[400ms] ${
         showNav ? "pl-52" : ""
       }`}
     >
