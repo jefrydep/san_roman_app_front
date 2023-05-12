@@ -1,6 +1,6 @@
 import { forwardRef, useState } from "react";
 import Link from "next/link";
-import { HomeIcon, CreditCardIcon, UserIcon } from "@heroicons/react/24/solid";
+import { HomeIcon, CreditCardIcon, UserIcon, UsersIcon, UserGroupIcon, TableCellsIcon, HomeModernIcon, MapIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 
 const SideBar = forwardRef(({ showNav }: any, ref: any) => {
@@ -58,7 +58,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             }`}
           >
             <div className="mr-2">
-              <CreditCardIcon className="h-5 w-5" />
+              <UserGroupIcon className="h-5 w-5" />
             </div>
             <div>
               <p>clientes</p>
@@ -74,7 +74,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             }`}
           >
             <div className="mr-2">
-              <CreditCardIcon className="h-5 w-5" />
+              <TableCellsIcon className="h-5 w-5" />
             </div>
             <div>
               <p>Ventas</p>
@@ -90,7 +90,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             }`}
           >
             <div className="mr-2">
-              <CreditCardIcon className="h-5 w-5" />
+              <HomeModernIcon className="h-5 w-5" />
             </div>
             <div>
               <p>Proyectos</p>
@@ -106,7 +106,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             }`}
           >
             <div className="mr-2">
-              <CreditCardIcon className="h-5 w-5" />
+              <MapIcon className="h-5 w-5" />
             </div>
             <div>
               <p>Lotes</p>

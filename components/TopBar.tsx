@@ -18,7 +18,7 @@ export default function TopBar({ showNav, setShowNav }:any) {
       }`}
     >
       <div className="pl-4   flex  items-center flex-row md:pl-16 ">
-        <Bars3CenterLeftIcon width={90}
+        <Bars3CenterLeftIcon width={60}
         
           className="    text-white cursor-pointer"
           onClick={() => setShowNav(!showNav)}

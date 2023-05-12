@@ -1,5 +1,6 @@
 import DescribeUser from "@/components/users/DescribeUser";
 import { UsersResponse } from "@/userResponseInterface";
+import { UserIcon, UserPlusIcon } from "@heroicons/react/24/solid";
 import axios from "axios";
 import { Formik, Field, Form } from "formik";
 import { url } from "inspector";
@@ -29,15 +30,15 @@ const usuarios = () => {
   }
   const onSubmit = (
     // { userName, dni, password }: MyFormValues,
-    values:MyFormValues
+    values: MyFormValues
     // { resetform }: any
   ) => {
     // resetform();
     // if( values  isEmpt)return;
-    
-    setShowModal(false)
+
+    setShowModal(false);
     // console.log({ userName, dni, password });
-    console.log({  values });
+    console.log({ values });
   };
   return (
     <>
@@ -46,13 +47,19 @@ const usuarios = () => {
           Modulo de usuarios
         </h2>
         <div className="flex justify-around   py-3">
-          <div className="bg-[#FFC02E] rounded-lg text-center  shadow-md px-5 mr-4  text-white font-bold text-lg">
-            <h2>Total de usuarios</h2>
-            <div>45</div>
+          <div className=" items-center px-3 py-3 rounded-lg text-center flex  gap-3 shadow-md mr-4  text-white font-bold text-lg">
+            <UserIcon className="h-12 p-2  bg-orange-400 rounded-full" />
+            <div>
+              <h2 className="text-gray-400">Total de usuarios</h2>
+              <div className="text-orange-400">45</div>
+            </div>
           </div>
-          <div className="bg-[#FFC02E] rounded-lg text-center shadow-md px-5 text-white font-bold text-lg">
-            <h2> Total de usuarios activos </h2>
-            <div>43</div>
+          <div className=" items-center px-3 py-3 rounded-lg text-center flex  gap-3 shadow-md mr-4  text-white font-bold text-lg">
+            <UserPlusIcon className="h-12 p-2  bg-green-400 rounded-full" />
+            <div>
+              <h2 className="text-gray-400">Total de usuarios</h2>
+              <div className="text-orange-400">45</div>
+            </div>
           </div>
         </div>
         <hr />
@@ -77,7 +84,6 @@ const usuarios = () => {
             <div className="  transition-shadow bg-white rounded-md   px-6 py-6     shadow-xl  ">
               <h3>Crear Usuario</h3>
               <Formik
-              
                 initialValues={{
                   userName: "",
                   dni: "",
@@ -95,7 +101,7 @@ const usuarios = () => {
                     name="userName"
                     placeholder="Jefry Palomino"
                   />
-                   <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                  <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                     Dni
                   </label>
                   <Field
@@ -104,7 +110,7 @@ const usuarios = () => {
                     name="dni"
                     placeholder="78459865"
                   />
-                    <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                  <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                     Contraseña
                   </label>
                   <Field
@@ -135,28 +141,28 @@ const usuarios = () => {
                     placeholder="************"
                   /> */}
 
-              <div className="flex gap-4 justify-center mt-4">
-                <button
-                  onClick={() => {
-                    setShowModal(false);
-                  }}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="button"
-                  >
-                  Cancelar
-                </button>
-                <button
-                  // onClick={() => {
-                  //   setShowModal(false);
-                  // }}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="submit"
-                  >
-                  Enviar
-                </button>
-              </div>
-                    </Form>
-                  </Formik>
+                  <div className="flex gap-4 justify-center mt-4">
+                    <button
+                      onClick={() => {
+                        setShowModal(false);
+                      }}
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      type="button"
+                    >
+                      Cancelar
+                    </button>
+                    <button
+                      // onClick={() => {
+                      //   setShowModal(false);
+                      // }}
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      type="submit"
+                    >
+                      Enviar
+                    </button>
+                  </div>
+                </Form>
+              </Formik>
             </div>
           </div>
         )}
@@ -206,11 +212,11 @@ const usuarios = () => {
           ) } */}
 
           <section className="flex gap3">
-            <label className="text-white font-bold" htmlFor="">
+            <label className="text-gray-500  mr-4" htmlFor="">
               Buscar:
             </label>
             <input
-              className="px-3 py-1 rounded-md outline-none  w-64  "
+              className="bg-gray-200 a  border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#1C5CFF]"
               type="text"
               placeholder="Jefry Palomino"
             />
@@ -243,11 +249,18 @@ const usuarios = () => {
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
+          <div className=" hidden sm:grid   content-center ">
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+              <option value="">Activo</option>
+              <option value="">Inactivo</option>
+            </select>
           </div>
           <div className="   grid content-center">
-            <h2>Admin</h2>
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+              <option value="">User</option>
+              <option value="">Admin</option>
+              <option value="">SuperUser</option>
+            </select>
           </div>
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
@@ -265,11 +278,18 @@ const usuarios = () => {
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
+          <div className=" hidden sm:grid   content-center ">
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+              <option value="">Activo</option>
+              <option value="">Inactivo</option>
+            </select>
           </div>
           <div className="   grid content-center">
-            <h2>Admin</h2>
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+              <option value="">User</option>
+              <option value="">Admin</option>
+              <option value="">SuperUser</option>
+            </select>
           </div>
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
@@ -287,11 +307,18 @@ const usuarios = () => {
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
+          <div className=" hidden sm:grid   content-center ">
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+              <option value="">Activo</option>
+              <option value="">Inactivo</option>
+            </select>
           </div>
           <div className="   grid content-center">
-            <h2>Admin</h2>
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+              <option value="">User</option>
+              <option value="">Admin</option>
+              <option value="">SuperUser</option>
+            </select>
           </div>
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
@@ -309,11 +336,18 @@ const usuarios = () => {
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
+          <div className=" hidden sm:grid   content-center ">
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+              <option value="">Activo</option>
+              <option value="">Inactivo</option>
+            </select>
           </div>
           <div className="   grid content-center">
-            <h2>Admin</h2>
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+              <option value="">User</option>
+              <option value="">Admin</option>
+              <option value="">SuperUser</option>
+            </select>
           </div>
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
@@ -331,11 +365,18 @@ const usuarios = () => {
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
+          <div className=" hidden sm:grid   content-center ">
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+              <option value="">Activo</option>
+              <option value="">Inactivo</option>
+            </select>
           </div>
           <div className="   grid content-center">
-            <h2>Admin</h2>
+            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+              <option value="">User</option>
+              <option value="">Admin</option>
+              <option value="">SuperUser</option>
+            </select>
           </div>
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
@@ -346,72 +387,7 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Rosi-Mami</h2>
-          </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="   grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Rosi-Mami</h2>
-          </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="   grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Rosi-Mami</h2>
-          </div>
-          <div className=" hidden sm:grid font-bold content-center ">
-            <h2 className="text-green-500">Activo</h2>
-          </div>
-          <div className="   grid content-center">
-            <h2>Admin</h2>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
+
         {users.map((users: UsersResponse, index) => (
           <DescribeUser
             key={users.id}
