@@ -17,6 +17,7 @@ import { useRouter } from "next/router";
 
 const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showSecurity, setShowSecurity] = useState(false)
   const router = useRouter();
 
   return (
@@ -48,7 +49,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             </div>
           </div>
         </Link>
-        <Link href="/usuarios" onClick={() => setShowMenu(!showMenu)}>
+        <Link href="/usuarios" onClick={() => setShowSecurity(!showSecurity)}>
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 gap-2 flex items-center transition-colors ${
               router.pathname == "/usuarios"
@@ -62,17 +63,20 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             <div>
               <p>Seguridad</p>
             </div>
-            {!showMenu ? (
+            {!showSecurity ? (
               <ChevronDownIcon className="h-5 w-5" />
             ) : (
               <ChevronUpIcon className="h-5 w-5" />
             )}
           </div>
         </Link>
-        <div className=" ml-10 border-l-4 border-white rounded-sm">
+        {showSecurity&&
+        
+        <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
           <div className="pl-14 py-2 text-gray-400 ">Permisos</div>
           <div className="pl-14 py-2  text-gray-400">Clientes</div>
         </div>
+      }
         <Link href="/clientes">
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
@@ -85,7 +89,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
               <UserGroupIcon className="h-5 w-5" />
             </div>
             <div>
-              <p>clientes</p>
+              <p>Logistica</p>
             </div>
           </div>
         </Link>
