@@ -4,7 +4,7 @@ const clientes = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className=" bg-gray-400 rounded-lg my-3">
+      <div className=" bg-white rounded-lg my-3">
         <h2 className="text-center py-4 font-bold text-lg text-blue-600">
           Modulo de clientes
         </h2>
@@ -21,7 +21,7 @@ const clientes = () => {
         <hr />
       </div>
 
-      <div className="text-center flex flex-col items-center gap-3 rounded-lg rounded-b-none  py-5 bg-gray-400 ">
+      <div className="text-center flex flex-col items-center gap-3 rounded-lg rounded-b-none  py-5 bg-white ">
         {!showModal ? (
           <button
             onClick={() => {
@@ -91,48 +91,41 @@ const clientes = () => {
       </div>
 
       <main>
-        <div className="grid grid-cols-4  lg:grid-cols-7   px-4 h-10 gap-3 text-white font-bold bg-blue-500">
-          <div className=" hidden lg:block">
+        <div className="grid grid-cols-3 lg:grid-cols-5 px-4 h-10 gap-3 text-white font-bold bg-blue-500">
+          <div className="hidden lg:block">
+            Nro
+          </div>
+          <div className="">
             <h2>Dni/Ruc</h2>
           </div>
           <div className=" ">
             <h2>Nombre</h2>
           </div>
-          <div className="   ">
+          <div className="hidden lg:block">
             <h2>Telefono</h2>
           </div>
-          <div className="  ">
-            <h2>T-Pago</h2>
-          </div>
-          <div className="   hidden lg:block ">
-            <h2>Fecha</h2>
-          </div>
-          <div className="  hidden lg:block  ">
-            <h2>Importe</h2>
-          </div>
+          
+          
           <div className="  ">
             <h2>Accciones</h2>
           </div>
         </div>
-        <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-4 lg:grid-cols-7   ">
+        <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-3 lg:grid-cols-5   ">
           <div className=" content-center hidden lg:grid ">
+            <h2>1</h2>
+          </div>
+          <div className=" content-center grid ">
             <h2>45785645</h2>
           </div>
           <div className="  grid content-center">
             <h2>J Palomino</h2>
           </div>
-          <div className="  font-bold grid content-center ">
+          <div className="  font-bold hidden lg:grid content-center ">
             <h2 className="text-green-500">958205138</h2>
           </div>
-          <div className="  grid content-center">
-            <h2>Credito</h2>
-          </div>
-          <div className="bg-green-400   content-center hidden lg:grid ">
-            <h2>14/01/2023</h2>
-          </div>
-          <div className="  bg-green-400  hidden lg:grid font-bold content-center ">
-            <h2 className="text-green-500">S/ 9000</h2>
-          </div>
+           
+          
+          
           <div className="  flex gap-1  ">
             <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
               D
@@ -141,63 +134,8 @@ const clientes = () => {
               U
             </div>
           </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-4 lg:grid-cols-7   ">
-          <div className=" content-center hidden lg:grid ">
-            <h2>45785645</h2>
           </div>
-          <div className="  grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="  font-bold grid content-center ">
-            <h2 className="text-green-500">958205138</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Contado</h2>
-          </div>
-          <div className="bg-green-400   content-center hidden lg:grid ">
-            <h2>14/01/2023</h2>
-          </div>
-          <div className="  bg-green-400  hidden lg:grid font-bold content-center ">
-            <h2 className="text-green-500">S/ 9000</h2>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
-        <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-4 lg:grid-cols-7   ">
-          <div className=" content-center hidden lg:grid ">
-            <h2>45785645</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>J Palomino</h2>
-          </div>
-          <div className="  font-bold grid content-center ">
-            <h2 className="text-green-500">958205138</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Credito</h2>
-          </div>
-          <div className="bg-green-400   content-center hidden lg:grid ">
-            <h2>14/01/2023</h2>
-          </div>
-          <div className="  bg-green-400  hidden lg:grid font-bold content-center ">
-            <h2 className="text-green-500">S/ 9000</h2>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
+      
       </main>
     </>
   );
