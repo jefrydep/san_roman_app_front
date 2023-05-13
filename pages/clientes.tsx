@@ -156,15 +156,15 @@ const clientes = () => {
       </div>
 
       <main>
-        <div className="grid grid-cols-3 lg:grid-cols-5 px-4 h-10 gap-3 content-center text-white font-bold bg-blue-500">
-          <div className="hidden lg:block">Nro</div>
+        <div className="grid grid-cols-3 sm:grid-cols-5 px-4 h-10 gap-3 content-center text-white font-bold bg-blue-500">
+          <div className="hidden sm:block">Nro</div>
           <div className="">
             <h2>Dni/Ruc</h2>
           </div>
           <div className=" ">
             <h2>Nombre</h2>
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden sm:block">
             <h2>Telefono</h2>
           </div>
 
@@ -172,8 +172,8 @@ const clientes = () => {
             <h2>Accciones</h2>
           </div>
         </div>
-        <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-3 lg:grid-cols-5   ">
-          <div className=" content-center hidden lg:grid ">
+        <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-3 sm:grid-cols-5   ">
+          <div className=" content-center hidden sm:grid ">
             <h2>1</h2>
           </div>
           <div className=" content-center grid ">
@@ -182,7 +182,7 @@ const clientes = () => {
           <div className="  grid content-center">
             <h2>J Palomino</h2>
           </div>
-          <div className="  font-bold hidden lg:grid content-center ">
+          <div className="  font-bold hidden sm:grid content-center ">
             <h2 className="text-green-500">958205138</h2>
           </div>
 

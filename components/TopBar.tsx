@@ -24,7 +24,7 @@ export default function TopBar({ showNav, setShowNav }:any) {
           onClick={() => setShowNav(!showNav)}
         />
         <div className="mx-4 font-bold text-white ">
-        CONSTRUCTORA E  INMOBILIARIA SAN ROMAN SAC
+         Jefrydep@gmail.com
         </div>
         
       </div>
