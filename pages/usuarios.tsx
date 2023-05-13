@@ -242,21 +242,21 @@ const usuarios = () => {
             <h2>Acciones</h2>
           </div>
         </div>
-        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-3 sm:grid-cols-5   ">
+          <div className=" hidden sm:grid content-center">
             <h2>1</h2>
           </div>
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
           <div className=" hidden sm:grid   content-center ">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+            <select className=" w-20 lg:w-max px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
               <option value="">Activo</option>
               <option value="">Inactivo</option>
             </select>
           </div>
           <div className="   grid content-center">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+            <select className=" px-3 py-1 w-20 lg:w-max rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
               <option value="">User</option>
               <option value="">Admin</option>
               <option value="">SuperUser</option>
@@ -271,21 +271,21 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-3 sm:grid-cols-5   ">
+          <div className=" hidden sm:grid content-center">
             <h2>1</h2>
           </div>
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
           <div className=" hidden sm:grid   content-center ">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+            <select className=" w-20 lg:w-max px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
               <option value="">Activo</option>
               <option value="">Inactivo</option>
             </select>
           </div>
           <div className="   grid content-center">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+            <select className=" px-3 py-1 w-20 lg:w-max rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
               <option value="">User</option>
               <option value="">Admin</option>
               <option value="">SuperUser</option>
@@ -300,21 +300,21 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-3 sm:grid-cols-5   ">
+          <div className=" hidden sm:grid content-center">
             <h2>1</h2>
           </div>
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
           <div className=" hidden sm:grid   content-center ">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+            <select className=" w-20 lg:w-max px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
               <option value="">Activo</option>
               <option value="">Inactivo</option>
             </select>
           </div>
           <div className="   grid content-center">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+            <select className=" px-3 py-1 w-20 lg:w-max rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
               <option value="">User</option>
               <option value="">Admin</option>
               <option value="">SuperUser</option>
@@ -329,21 +329,21 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
+        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-3 sm:grid-cols-5   ">
+          <div className=" hidden sm:grid content-center">
             <h2>1</h2>
           </div>
           <div className="  grid content-center">
             <h2>Rosi-Mami</h2>
           </div>
           <div className=" hidden sm:grid   content-center ">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
+            <select className=" w-20 lg:w-max px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
               <option value="">Activo</option>
               <option value="">Inactivo</option>
             </select>
           </div>
           <div className="   grid content-center">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
+            <select className=" px-3 py-1 w-20 lg:w-max rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
               <option value="">User</option>
               <option value="">Admin</option>
               <option value="">SuperUser</option>
@@ -358,35 +358,7 @@ const usuarios = () => {
             </div>
           </div>
         </div>
-        <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-5   ">
-          <div className="grid content-center">
-            <h2>1</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>Rosi-Mami</h2>
-          </div>
-          <div className=" hidden sm:grid   content-center ">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-green-400">
-              <option value="">Activo</option>
-              <option value="">Inactivo</option>
-            </select>
-          </div>
-          <div className="   grid content-center">
-            <select className=" px-3 py-1 rounded-xl border focus:border-e-red-50 focus:outline-none text-gray-500">
-              <option value="">User</option>
-              <option value="">Admin</option>
-              <option value="">SuperUser</option>
-            </select>
-          </div>
-          <div className="  flex gap-1  ">
-            <div className="bg-red-400 w-10 h-10 flex flex-col content-center justify-center  rounded-lg text-center text-white font-bold">
-              D
-            </div>
-            <div className="bg-orange-400 w-10 h-10 flex rounded-lg flex-col content-center justify-center  text-center text-white font-bold">
-              U
-            </div>
-          </div>
-        </div>
+        
 
         {users.map((users: UsersResponse, index) => (
           <DescribeUser
