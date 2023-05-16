@@ -1,9 +1,12 @@
+import Layout from "@/components/Layout";
 import React, { useState } from "react";
 
 const lotes = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
+    <Layout>
+
       <div className=" bg-gray-400 rounded-lg my-3">
         <h2 className="text-center py-4 font-bold text-lg text-blue-600">
           Modulo de Lotes
@@ -24,10 +27,10 @@ const lotes = () => {
       <div className="text-center flex flex-col items-center gap-3 rounded-lg rounded-b-none  py-5 bg-gray-400 ">
         {!showModal ? (
           <button
-            onClick={() => {
-              setShowModal(true);
-            }}
-            className="rounded-lg    text-white font-bold  px-2 py-1 bg-blue-500 "
+          onClick={() => {
+            setShowModal(true);
+          }}
+          className="rounded-lg    text-white font-bold  px-2 py-1 bg-blue-500 "
           >
             Agregar
           </button>
@@ -40,29 +43,29 @@ const lotes = () => {
                 className="px-3 py-1 rounded-2xl outline-none  w-64  "
                 type="text"
                 placeholder="Jefry Palomino"
-              />
+                />
               <input
                 className="px-3 py-1 rounded-2xl outline-none  w-64  "
                 type="text"
                 placeholder="Jefry Palomino"
-              />
+                />
               <input
                 className="px-3 py-1 rounded-2xl outline-none  w-64  "
                 type="text"
                 placeholder="Jefry Palomino"
-              />
+                />
               <input
                 className="px-3 py-1 rounded-2xl outline-none  w-64  "
                 type="text"
                 placeholder="Jefry Palomino"
-              />
+                />
               <div>
                 <button
                   onClick={() => {
                     setShowModal(false);
                   }}
                   className="bg-orange-400 rounded-2xl text-white font-bold px-3 mx-4"
-                >
+                  >
                   Enviar
                 </button>
                 <button
@@ -70,7 +73,7 @@ const lotes = () => {
                     setShowModal(false);
                   }}
                   className="bg-orange-400 rounded-2xl text-white font-bold px-3 mx-4"
-                >
+                  >
                   Cancelar
                 </button>
               </div>
@@ -85,7 +88,7 @@ const lotes = () => {
               className="px-3 py-1 rounded-2xl outline-none  w-64 shadow-2xl  "
               type="text"
               placeholder="Jefry Palomino"
-            />
+              />
           </section>
         </form>
       </div>
@@ -201,6 +204,7 @@ const lotes = () => {
         </div>
         
       </main>
+              </Layout>
     </>
   );
 };

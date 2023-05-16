@@ -1,7 +1,44 @@
 import Layout from '@/components/Layout'
-import React from 'react'
+import { AuthContext } from '@/context/auth';
+import axios from 'axios';
+import { Field, Form, Formik } from 'formik';
+import { Router, useRouter } from 'next/router';
+import React, { useContext } from 'react'
+
+
+
 
 const LoginPage = () => {
+  const router = useRouter();
+  const {loginUser} = useContext(AuthContext)
+  
+  // const URL = "http://localhost:3000/api/auth/";
+  interface MyFormValues {
+    documentNumber: string;
+    password: string;
+  }
+
+  const onLogin = async (
+    { documentNumber, password }: MyFormValues,
+    // values: MyFormValues
+    // { resetform }: any
+  ) => {
+    // resetform();
+    // if( values  isEmpt)return;
+// const {data} = await axios.post('http://localhost:3000/api/auth/login',{documentNumber:dni,password:password});
+// const {token,documentNumber}= data;
+// console.log({token,documentNumber});
+    // setShowModal(false);
+    // console.log({   dni, password });
+    const isValidLogin = await loginUser(documentNumber,password);
+    if(isValidLogin){
+
+      router.replace('/')
+    }
+    // console.log({ });
+  };
+  
+
   return (
     <div className="bg-[url('/assets/images/robot.jpg')] h-screen flex justify-center items-center">
 <div className="flex  mx-9 opacity-80 shadow-md  flex-col justify-center  bg-white  w-max bg-  px-6 py-12 lg:px-8 rounded-2xl ">
@@ -11,11 +48,23 @@ const LoginPage = () => {
   </div>
 
   <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm  ">
-    <form className="space-y-6" action="#" method="POST">
+    <Formik
+    initialValues={
+      {
+        documentNumber:"",
+        password:""
+      }
+    }
+    onSubmit={
+      onLogin
+    }
+    className="space-y-6"   >
+      <Form>
+
       <div>
         <label   className="block text-sm font-medium leading-6 text-gray-900">Dni</label>
         <div className="mt-2">
-          <input placeholder='75481254' required className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+          <Field placeholder='75481254' type="text" name="documentNumber" required className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
         </div>
       </div>
 
@@ -27,14 +76,15 @@ const LoginPage = () => {
           </div>
         </div>
         <div className="mt-2">
-          <input placeholder='***************' id="password" name="password" type="password"   required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2"/>
+          <Field placeholder='***************' id="password" name="password" type="password"   required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-2"/>
         </div>
       </div>
 
       <div>
         <button type="submit" className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Ingresar</button>
       </div>
-    </form>
+      </Form>
+    </Formik>
 
     <p className="mt-10 text-center text-sm text-gray-500">
      ¿No tienes cuenta?

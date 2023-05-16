@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import { Field, Form, Formik } from "formik";
 import React, { useState } from "react";
 
@@ -7,6 +8,8 @@ const clientes = () => {
   const onSubmit = () => {};
   return (
     <>
+    <Layout>
+
       <div className=" bg-white rounded-lg my-3">
         <h2 className="text-center py-4 font-bold text-lg text-blue-600">
           Modulo de clientes
@@ -27,10 +30,10 @@ const clientes = () => {
       <div className="text-center flex flex-col items-center gap-3 rounded-lg rounded-b-none  py-5 bg-white ">
         {!showModal ? (
           <button
-            onClick={() => {
-              setShowModal(true);
-            }}
-            className="rounded-lg    text-white font-bold  px-2 py-1 bg-blue-500 "
+          onClick={() => {
+            setShowModal(true);
+          }}
+          className="rounded-lg    text-white font-bold  px-2 py-1 bg-blue-500 "
           >
             Agregar
           </button>
@@ -48,7 +51,7 @@ const clientes = () => {
                   password: "",
                 }}
                 onSubmit={onSubmit}
-              >
+                >
                 <Form className="grid lg:grid-cols-2 gap-4">
                   <div className="mb-2">
                     <label className="block text-start text-gray-700 text-sm font-bold mb-2">
@@ -59,7 +62,7 @@ const clientes = () => {
                       type="text"
                       name="userName"
                       placeholder="47845112"
-                    />
+                      />
                     <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                       Cliente(Nombres y Apellidos)
                     </label>
@@ -68,7 +71,7 @@ const clientes = () => {
                       type="text"
                       name="dni"
                       placeholder="Jefry Palomino Mayta"
-                    />
+                      />
                     <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                       Genero
                     </label>
@@ -79,7 +82,7 @@ const clientes = () => {
                       type="text"
                       name="genero"
                       placeholder="Maculino/femenino"
-                    >
+                      >
                       <option value="select">Seleccione...</option>
                       <option value="masculino">Masculino</option>
                       <option value="femenino">Femenino</option>
@@ -95,7 +98,7 @@ const clientes = () => {
                       type="email"
                       name="email"
                       placeholder="jefrydep@gmail.com"
-                    />
+                      />
                     <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                       Fecha de Nacimiento
                     </label>
@@ -104,25 +107,25 @@ const clientes = () => {
                       type="date"
                       name="nacimiento"
                       placeholder="31/07/1998"
-                    />
+                      />
                   </div>
                   {/* <input
                 className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Jefry Palomino"
-                /> */}
+              /> */}
                   {/* <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                     Dni
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     type="text"
                     placeholder="75894565"
-                  />
-                  <label className="block text-start text-gray-700 text-sm font-bold mb-2">
+                    />
+                    <label className="block text-start text-gray-700 text-sm font-bold mb-2">
                     Contraseña
-                  </label>
-                  <input
+                    </label>
+                    <input
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     type="password"
                     placeholder="************"
@@ -135,16 +138,16 @@ const clientes = () => {
                       }}
                       className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                       type="button"
-                    >
+                      >
                       Cancelar
                     </button>
                     <button
                       // onClick={() => {
-                      //   setShowModal(false);
-                      // }}
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                      type="submit"
-                    >
+                        //   setShowModal(false);
+                        // }}
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit"
+                        >
                       Guardar
                     </button>
                   </div>
@@ -196,6 +199,7 @@ const clientes = () => {
           </div>
         </div>
       </main>
+        </Layout>
     </>
   );
 };

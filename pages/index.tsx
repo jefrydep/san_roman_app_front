@@ -12,6 +12,7 @@ import {
   LineChart,
   Line,
 } from "recharts";
+import Layout from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,8 @@ const data1 = [
 export default function Home() {
   return (
     <>
+    <Layout>
+
       <p className="text-gray-700 text-3xl mt-7 mb-3 font-bold">Graficos San roman</p>
 
       <div className="grid lg:grid-cols-3 gap-5 mb-16">
@@ -48,7 +51,7 @@ export default function Home() {
             width={500}
             height={300}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-          >
+            >
             <CartesianGrid strokeDasharray={"4 1 2"} />
             <XAxis dataKey={"Nombre"} />
             <YAxis />
@@ -67,6 +70,7 @@ export default function Home() {
           </LineChart>
         </div>
       </div>
+            </Layout>
     </>
   );
 }

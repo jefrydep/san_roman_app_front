@@ -3,6 +3,8 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import LoginPage from './login'
 import { useContext, useState } from 'react'
+import { AuthProvider } from '@/context/auth/AuthProvider'
+ 
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -18,11 +20,13 @@ const [isLogged, seTisLogged] = useState(true)
     
 
      
-     
-    <Layout>
+     <AuthProvider>
+
+    {/* // <Layout> */}
       <Component {...pageProps} />
 
-    </Layout>
+    {/* // </Layout> */}
+    //  </AuthProvider>
     
   );
 }
