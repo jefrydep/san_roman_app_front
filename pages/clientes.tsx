@@ -158,7 +158,7 @@ const clientes = () => {
         )}
       </div>
 
-      <main>
+     
         <div className="grid grid-cols-3 sm:grid-cols-5 px-4 h-10 gap-3 content-center text-white font-bold bg-blue-500">
           <div className="hidden sm:block">Nro</div>
           <div className="">
@@ -198,7 +198,7 @@ const clientes = () => {
             </div>
           </div>
         </div>
-      </main>
+      
         </Layout>
     </>
   );
