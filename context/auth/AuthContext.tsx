@@ -5,7 +5,7 @@ import { createContext } from "react";
 interface ContextProps{
     isLoggedIn:boolean;
     user?:Iuser;
-    loginUser: (dni: string, password: string) => Promise<boolean>
+    loginUser: (documentNumber: string, password: string) => Promise<boolean>
  
 }
 

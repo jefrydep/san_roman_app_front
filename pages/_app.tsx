@@ -26,7 +26,7 @@ const [isLogged, seTisLogged] = useState(true)
       <Component {...pageProps} />
 
     {/* // </Layout> */}
-    //  </AuthProvider>
+    </AuthProvider>
     
   );
 }

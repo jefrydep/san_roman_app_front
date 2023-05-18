@@ -14,10 +14,12 @@ import {
   ChevronUpIcon,
 } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
+import CustomLink from "./Link/CustomLink";
+import { IconType } from "recharts/types/component/DefaultLegendContent";
 
 const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const [showMenu, setShowMenu] = useState(false);
-  const [showSecurity, setShowSecurity] = useState(false)
+  const [showSecurity, setShowSecurity] = useState(false);
   const router = useRouter();
 
   return (
@@ -33,22 +35,19 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
       </div>
 
       <div className="flex flex-col ">
-        <Link href="/">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == "/"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <HomeIcon className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Home</p>
-            </div>
-          </div>
-        </Link>
+        {/* <CustomLink
+          path="/"
+          routerName="home"
+          icon={<HomeIcon className="h-5 w-5" />}
+          hiddenIcon="hidden"
+        /> */}
+
+        <CustomLink  onClick={()=>setShowSecurity(!showSecurity)} path="/usuarios"
+       
+          routerName="Seguridad"
+          icon={<UserIcon />}
+          />
+        {/* 
         <Link href="/usuarios" onClick={() => setShowSecurity(!showSecurity)}>
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 gap-2 flex items-center transition-colors ${
@@ -69,14 +68,13 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
               <ChevronUpIcon className="h-5 w-5" />
             )}
           </div>
-        </Link>
-        {showSecurity&&
-        
-        <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
-          <div className="pl-14 py-2 text-gray-400 ">Permisos</div>
-          <div className="pl-14 py-2  text-gray-400">Clientes</div>
-        </div>
-      }
+        </Link> */}
+        {showSecurity && (
+          <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
+            <div className="pl-14 py-2 text-gray-400 ">Permisos</div>
+            <div className="pl-14 py-2  text-gray-400">Clientes</div>
+          </div>
+        )}
         <Link href="/clientes">
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
@@ -173,6 +171,12 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             </div>
           </div>
         </Link>
+        {/* <CustomLink
+          path="/prueb"
+          routerName="prueba"
+          icon={<CreditCardIcon className="h-5 w-5" />}
+          hiddenIcon="hidden"
+        /> */}
 
         <div className="grid grid-cols-1 ">
           <Link href="/reportes">
