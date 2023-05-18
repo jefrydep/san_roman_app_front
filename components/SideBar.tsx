@@ -16,6 +16,7 @@ import {
 import { useRouter } from "next/router";
 import CustomLink from "./Link/CustomLink";
 import { IconType } from "recharts/types/component/DefaultLegendContent";
+import DropDown from "./Link/DropDown";
 
 const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -35,62 +36,19 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
       </div>
 
       <div className="flex flex-col ">
-        {/* <CustomLink
-          path="/"
-          routerName="home"
-          icon={<HomeIcon className="h-5 w-5" />}
-          hiddenIcon="hidden"
-        /> */}
+        
+        
+        <DropDown onClick={()=> setShowSecurity(!showSecurity)}  routName="SEGURIDAD"/>
+        {
+          showSecurity&& <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
+          <div    className="pl-3 py-2 text-gray-400 "><CustomLink   path="/seguridad/clientes" routerName="Clientes"/></div>
+          <div   className="pl-3 py-2  text-gray-400"><CustomLink path="/seguridad/permisos" routerName="Permisos"/></div>
+        </div>
 
-        <CustomLink  onClick={()=>setShowSecurity(!showSecurity)} path="/usuarios"
+        }
        
-          routerName="Seguridad"
-          icon={<UserIcon />}
-          />
-        {/* 
-        <Link href="/usuarios" onClick={() => setShowSecurity(!showSecurity)}>
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 gap-2 flex items-center transition-colors ${
-              router.pathname == "/usuarios"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <UserIcon className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Seguridad</p>
-            </div>
-            {!showSecurity ? (
-              <ChevronDownIcon className="h-5 w-5" />
-            ) : (
-              <ChevronUpIcon className="h-5 w-5" />
-            )}
-          </div>
-        </Link> */}
-        {showSecurity && (
-          <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
-            <div className="pl-14 py-2 text-gray-400 ">Permisos</div>
-            <div className="pl-14 py-2  text-gray-400">Clientes</div>
-          </div>
-        )}
-        <Link href="/clientes">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == "/clientes"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <UserGroupIcon className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Logistica</p>
-            </div>
-          </div>
-        </Link>
+       
+         
         <Link href="/ventas">
           <div
             className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${

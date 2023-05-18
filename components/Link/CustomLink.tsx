@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
 import   { useRouter } from "next/router";
 import {
@@ -14,25 +14,26 @@ interface LinkProps {
   routerName: string;
   icon?: ReactNode;
  
-  onClick:()=> void;
+ 
   hiddenIcon?:string;
 }
 
-const CustomLink = ({ path, routerName,icon,hiddenIcon,onClick}: LinkProps) => {
-  const [showMenuItem, setShowMenuItem] = useState(false);
+const CustomLink = ({ path, routerName,icon,hiddenIcon, }: LinkProps) => {
+  // const [showMenuItem, setShowMenuItem] = useState(false);
 //   const handleClick = (e:React.MouseEvent<HTMLDivElement>)=>{
-  const handleClick = ( )=>{
-  
-   onClick();
-    setShowMenuItem(!showMenuItem);
-     
-  }
+    // const handleClick = ( )=>{
+    //     // e.preventDefault();
+    //     onClick();
+    //     setShowMenuItem(!showMenuItem);
+        
+    // }
+ 
   const router = useRouter()
   return (
     <>
-      <Link href={path} onClick={handleClick}>
+      <Link href={path} >
         <div
-          className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 gap-2 flex items-center transition-colors ${
+          className={` rounded text-center cursor-pointer  mr-3 gap-2 flex items-center transition-colors ${
             router.pathname ==  path
               ? "bg-[#697DB3] text-white"
               : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
@@ -45,13 +46,7 @@ const CustomLink = ({ path, routerName,icon,hiddenIcon,onClick}: LinkProps) => {
           <div>
             <p>{routerName}</p>
           </div>
- 
- 
-          {!showMenuItem ? (
-            <ChevronDownIcon className={`h-5 w-5 ${hiddenIcon}`} />
-          ) : (
-            <ChevronUpIcon className={`h-5 w-5 ${hiddenIcon}`} />
-          )}
+
 
         </div>
       </Link>
