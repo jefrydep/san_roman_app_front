@@ -39,7 +39,7 @@ export default function Home() {
               <div>
                 <input
                   type="text"
-                  placeholder="Buscar"
+                  placeholder="Buscar Por Dni"
                   className="px-3 border text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"
                 />
               </div>
@@ -48,7 +48,7 @@ export default function Home() {
           <hr />
         </div>
 
-        <section className="overflow-x-scroll h-[48git ivh]  ">
+        <section className="overflow-x-scroll h-[48vh]  ">
           <div className="grid  w-[900px] lg:w-auto grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
             <div className="">
               <h2 className="">Id</h2>
