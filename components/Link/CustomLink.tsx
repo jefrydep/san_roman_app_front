@@ -15,23 +15,23 @@ interface LinkProps {
   icon?: ReactNode;
  
  
-  hiddenIcon?:string;
+ 
 }
 
-const CustomLink = ({ path, routerName,icon,hiddenIcon, }: LinkProps) => {
+const CustomLink = ({ path, routerName,icon}: LinkProps) => {
   // const [showMenuItem, setShowMenuItem] = useState(false);
-//   const handleClick = (e:React.MouseEvent<HTMLDivElement>)=>{
-    // const handleClick = ( )=>{
-    //     // e.preventDefault();
-    //     onClick();
-    //     setShowMenuItem(!showMenuItem);
+  // const handleClick = (e:React.MouseEvent<HTMLDivElement>)=>{
+  //   // const handleClick = ( )=>{
+  //       e.preventDefault();
+  //       // onClick();
+  //       // setShowMenuItem(!showMenuItem);
         
-    // }
+  //   }
  
   const router = useRouter()
   return (
     <>
-      <Link href={path} >
+      <Link href={path}   >
         <div
           className={` rounded text-center cursor-pointer  mr-3 gap-2 flex items-center transition-colors ${
             router.pathname ==  path

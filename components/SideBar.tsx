@@ -21,6 +21,7 @@ import DropDown from "./Link/DropDown";
 const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const [showMenu, setShowMenu] = useState(false);
   const [showSecurity, setShowSecurity] = useState(false);
+  const [showReportes, setShowReportes] = useState(false);
   const router = useRouter();
 
   return (
@@ -41,11 +42,20 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
         <DropDown onClick={()=> setShowSecurity(!showSecurity)}  routName="SEGURIDAD"/>
         {
           showSecurity&& <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
-          <div    className="pl-3 py-2 text-gray-400 "><CustomLink   path="/seguridad/clientes" routerName="Clientes"/></div>
+          <div    className="pl-3 py-2 text-gray-400 "><CustomLink   path="/seguridad/usuarios" routerName="Usuarios"/></div>
           <div   className="pl-3 py-2  text-gray-400"><CustomLink path="/seguridad/permisos" routerName="Permisos"/></div>
         </div>
 
         }
+        <DropDown onClick={()=> setShowReportes(!showReportes)}  routName="REPORTES"/>
+        {
+          showReportes&& <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
+          <div    className="pl-3 py-2 text-gray-400 "><CustomLink   path="/reportes/clientes" routerName="Clientes"/></div>
+          <div   className="pl-3 py-2  text-gray-400"><CustomLink path="/reportes/ventas" routerName="Ventas"/></div>
+        </div>
+
+        }
+
        
        
          
@@ -113,28 +123,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             </div>
           </div>
         </Link>
-        <Link href="/gastos">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == "/gastos"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <CreditCardIcon className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Gastos</p>
-            </div>
-          </div>
-        </Link>
-        {/* <CustomLink
-          path="/prueb"
-          routerName="prueba"
-          icon={<CreditCardIcon className="h-5 w-5" />}
-          hiddenIcon="hidden"
-        /> */}
+         
 
         <div className="grid grid-cols-1 ">
           <Link href="/reportes">
@@ -167,7 +156,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
           )}
         </div>
 
-        <div className="text-white  "> jefrydep@gmail.com</div>
+         
       </div>
     </div>
   );

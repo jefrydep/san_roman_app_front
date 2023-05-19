@@ -44,7 +44,7 @@ const usuarios = () => {
   };
   return (
     <>
-      <Layout>
+      <Layout >
         <div className=" bg-white rounded-lg my-3">
           <h2 className="text-center py-4 font-bold text-lg text-blue-600">
             Modulo de usuarios

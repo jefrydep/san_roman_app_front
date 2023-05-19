@@ -1,4 +1,4 @@
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
+import { ChevronDownIcon, ChevronUpIcon, UserIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/router';
 import React, { ReactNode, useState } from 'react'
 interface DropDownProps{
@@ -10,8 +10,9 @@ const DropDown = ({icon,routName,onClick}:DropDownProps) => {
 const [showMenuITem, setShowMenuITem] = useState(false)
    const  router = useRouter()
     //  const handleClick = ()=>{
-    const handleClick = ( )=>{
-        // e.preventDefault();
+    // const handleClick = ( e:React.MouseEvent<HTMLDivElement>)=>{
+    const handleClick = (  )=>{
+       
         onClick();
         setShowMenuITem(!showMenuITem);
         
@@ -20,7 +21,7 @@ const [showMenuITem, setShowMenuITem] = useState(false)
   return (
     < >
      <div onClick={handleClick}
-          className={`pl-6 hover:bg-[#3C4AB8] hover:text-white py-3 mx-5 rounded text-center cursor-pointer mb-3 gap-2 flex items-center transition-colors  ${
+          className={`pl-6 hover:bg-[#3C4AB8]  hover:text-white py-3 mx-5 rounded text-center cursor-pointer mb-3 gap-2 flex items-center  transition-colors  ${
             router.pathname ==  routName
               ? "bg-[#697DB3] text-white"
               : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
@@ -28,17 +29,20 @@ const [showMenuITem, setShowMenuITem] = useState(false)
           
         >
           <div className="mr-2">
-            {/* <UserIcon className="h-5 w-5" /> */}
+            <UserIcon className="h-5 w-5" />
             {icon }
           </div>
           <div>
             <p>{routName}</p>
           </div>
+          <div className='absolute right-6'>
+
           {!showMenuITem ? (
               <ChevronDownIcon className="h-5 w-5" />
             ) : (
               <ChevronUpIcon className="h-5 w-5" />
             )}
+          </div>
 
 
         </div> </ >
