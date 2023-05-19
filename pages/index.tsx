@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         <section className="overflow-x-scroll ">
-          <div className="grid  w-[100vw] grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
+          <div className="grid  w-[900px] lg:w-auto grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
             <div className="">
               <h2 className="">Id</h2>
             </div>
@@ -103,8 +103,8 @@ export default function Home() {
             </div>
           </div>
             */}
-          <div className=" px-4 grid bg-white w-[100vw]   border gap-4 py-3 grid-cols-7   ">
-            <div className=" content-center hidden sm:grid ">
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
               <h2>1</h2>
             </div>
             <div className=" content-center grid ">
@@ -126,6 +126,214 @@ export default function Home() {
               <h2 className="text-white">S/5000</h2>
             </div>
           </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+          <div className=" px-4 grid bg-white w-[900px] lg:w-auto  border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
+          </div>
+           
         </section>
       </Layout>
     </>
