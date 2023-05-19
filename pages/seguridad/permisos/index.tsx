@@ -6,7 +6,7 @@ const Permisos = () => {
     <>
     <Layout>
 
-    <div>Permisos</div>
+    <div>configuracion de permisos</div>
     </Layout>
     </>
   )
