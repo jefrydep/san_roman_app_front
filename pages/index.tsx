@@ -334,7 +334,7 @@ export default function Home() {
           </div>
            
         </section>
-          <div>
+          <div className="sticky bottom-0 px-4 bg-blue-400 text-white font-bold">
             <h3>@Inmobiliaria Palomino</h3>
           </div>
       </Layout>
