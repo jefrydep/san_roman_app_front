@@ -7,16 +7,13 @@ import { Formik, Field, Form } from "formik";
 import { url } from "inspector";
 import { useEffect, useState } from "react";
 
-export default function Home ()  {
-  
-   
- 
+export default function Home() {
   return (
     <>
-      <Layout >
+      <Layout>
         <div className=" bg-white rounded-lg my-3">
           <h2 className="text-center py-4 font-bold text-2xl text-blue-400">
-           Inmobiliaria Palomino
+            Inmobiliaria Palomino
           </h2>
           <div className="grid grid-cols-2 justify-around  py-3">
             <div className=" items-center px-3 mx-3 py-3 rounded-lg text-center flex  gap-3 shadow-md mr-4  text-white font-bold text-lg">
@@ -32,32 +29,34 @@ export default function Home ()  {
                 <h2 className="text-gray-400">Lotes Disponibles</h2>
                 <div className="text-orange-400">200</div>
               </div>
-              
             </div>
             <div className="mx-3 my-5">
               <div>
-
-                <h2 className="my-3 text-gray-300 font-bold text-2xl">Listado de Creditos</h2>
+                <h2 className="my-3 text-gray-300 font-bold text-2xl">
+                  Listado de Creditos
+                </h2>
               </div>
               <div>
-                <input type="text" placeholder="Buscar" className="px-3 border text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"/>
+                <input
+                  type="text"
+                  placeholder="Buscar"
+                  className="px-3 border text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"
+                />
               </div>
             </div>
- 
           </div>
           <hr />
         </div>
 
-         
-        <section>
-          <div className="grid grid-cols-3 sm:grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
-            <div className=" hidden sm:block ">
+        <section className="overflow-x-scroll ">
+          <div className="grid  w-[100vw] grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
+            <div className="">
               <h2 className="">Id</h2>
             </div>
             <div className="">
               <h2>Cliente</h2>
             </div>
-            <div className="  hidden sm:block">
+            <div className="    ">
               <h2>Cuota</h2>
             </div>
             <div className="">
@@ -104,35 +103,31 @@ export default function Home ()  {
             </div>
           </div>
             */}
-  <div className=" px-4 grid bg-white     border gap-4 py-3 grid-cols-3 sm:grid-cols-7   ">
-          <div className=" content-center hidden sm:grid ">
-            <h2>1</h2>
+          <div className=" px-4 grid bg-white w-[100vw]   border gap-4 py-3 grid-cols-7   ">
+            <div className=" content-center hidden sm:grid ">
+              <h2>1</h2>
+            </div>
+            <div className=" content-center grid ">
+              <h2>Jefry Palomino</h2>
+            </div>
+            <div className="  grid content-center">
+              <h2>s/500</h2>
+            </div>
+            <div className="    content-center ">
+              <h2 className="">958205138</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/06/2023</h2>
+            </div>
+            <div className="     content-center ">
+              <h2 className="">12/07/2023</h2>
+            </div>{" "}
+            <div className="px-2 bg-green-500 font-bold   content-center ">
+              <h2 className="text-white">S/5000</h2>
+            </div>
           </div>
-          <div className=" content-center grid ">
-            <h2>Jefry Palomino</h2>
-          </div>
-          <div className="  grid content-center">
-            <h2>s/500</h2>
-          </div>
-          <div className="   hidden sm:grid content-center ">
-            <h2 className="">958205138</h2>
-          </div>
-          <div className="    hidden sm:grid content-center ">
-            <h2 className="">12/06/2023</h2>
-          </div>
-          <div className="   first:last:hidden sm:grid content-center ">
-            <h2 className="">12/07/2023</h2>
-          </div> <div className="px-2 bg-green-500 font-bold hidden sm:grid content-center ">
-            <h2 className="text-white">S/5000</h2>
-          </div>
-
-
-          
-        </div>
         </section>
       </Layout>
     </>
   );
-};
-
- 
+}
