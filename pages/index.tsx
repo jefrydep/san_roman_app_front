@@ -48,7 +48,7 @@ export default function Home() {
           <hr />
         </div>
 
-        <section className="overflow-x-scroll h-[48vh]  ">
+        <section className="overflow-x-scroll h-[48git ivh]  ">
           <div className="grid  w-[900px] lg:w-auto grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
             <div className="">
               <h2 className="">Id</h2>
@@ -334,6 +334,9 @@ export default function Home() {
           </div>
            
         </section>
+          <div>
+            <h3>@Inmobiliaria Palomino</h3>
+          </div>
       </Layout>
     </>
   );
