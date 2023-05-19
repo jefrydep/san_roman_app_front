@@ -48,7 +48,7 @@ export default function Home() {
           <hr />
         </div>
 
-        <section className="overflow-x-scroll h-[50vh] ">
+        <section className="overflow-x-scroll h-[48vh]  ">
           <div className="grid  w-[900px] lg:w-auto grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
             <div className="">
               <h2 className="">Id</h2>
@@ -63,7 +63,6 @@ export default function Home() {
               <h2>Telefono</h2>
             </div>
             <div className="">
-              
               <h2>Fecha de venta</h2>
             </div>
             <div className="">
