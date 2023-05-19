@@ -33,7 +33,7 @@ const clientes = () => {
           onClick={() => {
             setShowModal(true);
           }}
-          className="rounded-lg    text-white font-bold  px-2 py-1 bg-blue-500 "
+          className="rounded-lg   hover:bg-blue-500   hover:text-white   text-blue-500 font-bold  px-2 py-1 border-2 border-blue-500 "
           >
             Agregar
           </button>

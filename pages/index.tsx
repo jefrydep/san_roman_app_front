@@ -36,12 +36,15 @@ export default function Home() {
                   Listado de Creditos
                 </h2>
               </div>
-              <div>
+              <div className="flex gap-4">
                 <input
                   type="text"
                   placeholder="Buscar Por Dni"
                   className="px-3 border text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"
                 />
+                <button className="border rounded-md px-6 hover:text-white hover:bg-slate-700 hover:font-bold">
+                  Buscar
+                </button>
               </div>
             </div>
           </div>
