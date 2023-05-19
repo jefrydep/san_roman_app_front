@@ -29,22 +29,21 @@ const usuarios = () => {
     dni: string;
     password: string;
   }
-  const onSubmit = (
-    { userName, dni, password }: MyFormValues,
+  const onSubmit = ({ userName, dni, password }: MyFormValues) =>
     // values: MyFormValues
     // { resetform }: any
-    
-  ) => {
-    // resetform();
-    // if( values  isEmpt)return;
 
-    setShowModal(false);
-    console.log({ userName, dni, password });
-    // console.log({ values });
-  };
+    {
+      // resetform();
+      // if( values  isEmpt)return;
+
+      setShowModal(false);
+      console.log({ userName, dni, password });
+      // console.log({ values });
+    };
   return (
     <>
-      <Layout >
+      <Layout>
         <div className=" bg-white rounded-lg my-3">
           <h2 className="text-center py-4 font-bold text-lg text-blue-600">
             Modulo de usuarios
@@ -68,15 +67,15 @@ const usuarios = () => {
           <hr />
         </div>
 
-        <div className="text-center flex flex-col items-center gap-3 rounded-lg rounded-b-none  py-5 bg-white">
+        <div className="text-center px-5 flex flex-col   gap-3 rounded-lg rounded-b-none  py-5 bg-white">
           {!showModal ? (
             <button
               onClick={() => {
                 setShowModal(true);
               }}
-              className="flex  justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="flex   justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-bold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Agregar
+              Agregar +
             </button>
           ) : null}
 
@@ -170,7 +169,7 @@ const usuarios = () => {
             </div>
           )}
 
-          <form className="  flex flex-col  gap-3  " action="">
+          <form className=" " action="">
             {/* {showModal && (
             <div className="flex flex-col   items-center gap-2">
             <input
@@ -214,16 +213,18 @@ const usuarios = () => {
                 </div>
               ) } */}
 
-            <section className="flex gap3">
-              <label className="text-gray-500  mr-4" htmlFor="">
-                Buscar:
-              </label>
-              <input
-                className="bg-gray-200 a  border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#1C5CFF]"
-                type="text"
-                placeholder="Jefry Palomino"
-              />
-            </section>
+          
+              <div className="flex gap-4">
+                <input
+                  type="text"
+                  placeholder="Buscar Por Dni"
+                  className="px-3 border text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"
+                />
+                <button className="border rounded-md px-6 hover:text-white hover:bg-slate-700 hover:font-bold">
+                  Buscar
+                </button>
+              </div>
+            
           </form>
         </div>
 
