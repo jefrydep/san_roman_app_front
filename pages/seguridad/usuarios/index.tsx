@@ -214,7 +214,7 @@ const usuarios = () => {
               ) } */}
 
           
-              <div className="flex gap-4">
+              <div className="flex gap-2 flex-col sm:flex-row">
                 <input
                   type="text"
                   placeholder="Buscar Por Dni"
