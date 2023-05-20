@@ -7,10 +7,15 @@ import {
   HomeModernIcon,
   MapIcon,
 } from "@heroicons/react/24/solid";
+import { HiHome } from "react-icons/hi";
 import { useRouter } from "next/router";
 import CustomLink from "./Link/CustomLink";
 import DropDown from "./Link/DropDown";
-
+import { SiSecurityscorecard } from "react-icons/si";
+import { TbReportSearch } from "react-icons/tb";
+import { FcSalesPerformance  } from "react-icons/fc";
+import { GiLightProjector } from "react-icons/gi";
+import { IoMdMap } from "react-icons/io";
 const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   const [showMenu, setShowMenu] = useState(false);
   const [showSecurity, setShowSecurity] = useState(false);
@@ -20,6 +25,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
   return (
     
     <div
+
       ref={ref}
       className=" overflow-y-auto fixed w-56 h-full scroll-smooth border bg-[#17286B]  shadow-sm"
     >
@@ -41,7 +47,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             }`}
           >
             <div className="mr-2">
-              <HomeModernIcon className="h-5 w-5" />
+              <HiHome className=" " />
             </div>
             <div>
               <p>Home</p>
@@ -50,7 +56,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
         </Link>
          
 
-        <DropDown onClick={()=> setShowSecurity(!showSecurity)}  routName="SEGURIDAD"/>
+        <DropDown icon={<SiSecurityscorecard/>} onClick={()=> setShowSecurity(!showSecurity)}  routName="SEGURIDAD"/>
         {
           showSecurity&& <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
           <div    className="pl-3 py-2 text-gray-400 "><CustomLink   path="/seguridad/usuarios" routerName="Usuarios"/></div>
@@ -58,7 +64,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
         </div>
 
         }
-        <DropDown onClick={()=> setShowReportes(!showReportes)}  routName="REPORTES"/>
+        <DropDown icon={<TbReportSearch/>} onClick={()=> setShowReportes(!showReportes)}  routName="REPORTES"/>
         {
           showReportes&& <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
           <div    className="pl-3 py-2 text-gray-400 "><CustomLink   path="/reportes/clientes" routerName="Clientes"/></div>
@@ -79,7 +85,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             }`}
           >
             <div className="mr-2">
-              <TableCellsIcon className="h-5 w-5" />
+              <FcSalesPerformance className="h-5 w-5" />
             </div>
             <div>
               <p>Ventas</p>
@@ -95,7 +101,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             }`}
           >
             <div className="mr-2">
-              <HomeModernIcon className="h-5 w-5" />
+              <GiLightProjector className="h-5 w-5" />
             </div>
             <div>
               <p>Proyectos</p>
@@ -111,7 +117,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
             }`}
           >
             <div className="mr-2">
-              <MapIcon className="h-5 w-5" />
+              <IoMdMap className="h-5 w-5" />
             </div>
             <div>
               <p>Lotes</p>

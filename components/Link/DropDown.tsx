@@ -29,7 +29,7 @@ const [showMenuITem, setShowMenuITem] = useState(false)
           
         >
           <div className="mr-2">
-            <UserIcon className="h-5 w-5" />
+            
             {icon }
           </div>
           <div>
