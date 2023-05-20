@@ -36,23 +36,25 @@ export default function Home() {
                   Listado de Creditos
                 </h2>
               </div>
-              <div className="flex gap-4">
+            </div>
+          </div>
+              <div className="flex flex-col  mb-3 gap-4">
                 <input
                   type="text"
                   placeholder="Buscar Por Dni"
-                  className="px-3 border text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"
+                  className="px-3 border mx-4 text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"
                 />
-                <button className="border rounded-md px-6 hover:text-white hover:bg-slate-700 hover:font-bold">
+                <button className="border mx-4 rounded-md px-6 hover:text-white hover:bg-slate-700 hover:font-bold">
                   Buscar
                 </button>
               </div>
-            </div>
-          </div>
           <hr />
         </div>
 
-        <section className="overflow-x-scroll h-[48vh]  ">
-          <div className="grid  w-[900px] lg:w-auto grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
+        <section className="overflow-x-scroll relative    h-[48vh]  ">
+         
+
+          <div className="grid  sticky top-0   w-[900px] lg:w-auto grid-cols-7 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
             <div className="">
               <h2 className="">Id</h2>
             </div>
@@ -74,6 +76,7 @@ export default function Home() {
             <div className="">
               <h2>Restante</h2>
             </div>
+           
           </div>
           {/* <div className=" px-4 grid bg-white shadow-md    border gap-3 py-3 grid-cols-3 sm:grid-cols-5   ">
             <div className=" hidden sm:grid content-center">

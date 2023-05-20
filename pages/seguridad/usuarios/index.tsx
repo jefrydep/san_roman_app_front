@@ -228,7 +228,7 @@ const usuarios = () => {
           </form>
         </div>
 
-        <main>
+        <section>
           <div className="grid grid-cols-3 sm:grid-cols-5 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
             <div className=" hidden sm:block ">
               <h2 className="">Id</h2>
@@ -286,7 +286,7 @@ const usuarios = () => {
               role={users.role[0]}
             />
           ))}
-        </main>
+        </section>
       </Layout>
     </>
   );
