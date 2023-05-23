@@ -33,8 +33,8 @@ const CustomLink = ({ path, routerName,icon}: LinkProps) => {
     <>
       <Link href={path}   >
         <div
-          className={` rounded text-center cursor-pointer  mr-3 gap-2 flex items-center transition-colors ${
-            router.pathname ==  path
+          className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
+            router.pathname == path
               ? "bg-[#697DB3] text-white"
               : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
           }`}

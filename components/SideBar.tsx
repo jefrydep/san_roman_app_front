@@ -38,141 +38,28 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
 
       <div className="flex flex-col z-20 ">
          
-      <Link href="/">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == "/"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <HiHome className=" " />
-            </div>
-            <div>
-              <p>Home</p>
-            </div>
-          </div>
-        </Link>
-         
-
-        <DropDown icon={<SiSecurityscorecard/>} onClick={()=> setShowSecurity(!showSecurity)}  routName="SEGURIDAD"/>
-        {
-          showSecurity&& <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
-          <div    className="pl-3 py-2 text-gray-400 "><CustomLink   path="/seguridad/usuarios" routerName="Usuarios"/></div>
-          <div   className="pl-3 py-2  text-gray-400"><CustomLink path="/seguridad/permisos" routerName="Permisos"/></div>
-        </div>
-
-        }
-        <DropDown icon={<TbReportSearch/>} onClick={()=> setShowReportes(!showReportes)}  routName="REPORTES"/>
-        {
-          showReportes&& <div className=" ml-10 border-l-4 mb-3 border-white rounded-sm">
-          <div    className="pl-3 py-2 text-gray-400 "><CustomLink   path="/reportes/clientes" routerName="Clientes"/></div>
-          <div   className="pl-3 py-2  text-gray-400"><CustomLink path="/reportes/ventas" routerName="Ventas"/></div>
-        </div>
-
-        }
-
        
-       
+
+       <CustomLink path="/" routerName="Inicio" icon={<HiHome/>} />
+        <hr className="my-5" />
+       <h4 className="text-white ml-6">SEGURIDAD</h4> 
+       <CustomLink path="/seguridad/usuarios" routerName="Usuarios" icon={<HiHome/>} /> 
+       <CustomLink path="/seguridad/permisos" routerName="Permisos" icon={<HiHome/>} /> 
+        <hr className="my-5" />
+       <h4 className="text-white ml-6">LOGISTICA</h4> 
+       <CustomLink path="/logistica/proyectos" routerName="Proyectos" icon={<HiHome/>} /> 
+       <CustomLink path="/logistica/manzanas" routerName="Manzanas" icon={<HiHome/>} /> 
+       <CustomLink path="/logistica/lotes" routerName="Lotes" icon={<HiHome/>} /> 
+        <hr className="my-5" />
+       <h4 className="text-white ml-6">Reportes</h4> 
+       <CustomLink path="/reportes/clientes" routerName="Clientes" icon={<HiHome/>} /> 
+       <CustomLink path="/reportes/ventas" routerName="Ventas" icon={<HiHome/>} /> 
          
-        <Link href="/ventas">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == "/ventas"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <FcSalesPerformance className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Ventas</p>
-            </div>
-          </div>
-        </Link>
-        <Link href="/proyectos">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == "/proyectos"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <GiLightProjector className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Proyectos</p>
-            </div>
-          </div>
-        </Link>
-        <Link href="/lotes">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == "/Lotes"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <IoMdMap className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Lotes</p>
-            </div>
-          </div>
-        </Link>
-        <Link href="/manzana">
-          <div
-            className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer mb-3 flex items-center transition-colors ${
-              router.pathname == "/manzana"
-                ? "bg-[#697DB3] text-white"
-                : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-            }`}
-          >
-            <div className="mr-2">
-              <CreditCardIcon className="h-5 w-5" />
-            </div>
-            <div>
-              <p>Manzanas</p>
-            </div>
-          </div>
-        </Link>
+ 
+
+        
          
-
-        <div className="grid grid-cols-1 ">
-          <Link href="/reportes">
-            <div
-              onClick={() => setShowMenu(!showMenu)}
-              className={`pl-6 py-3 mx-5 rounded text-center cursor-pointer  flex items-center transition-colors ${
-                router.pathname == "/reportes"
-                  ? "bg-[#697DB3] text-white"
-                  : "text-gray-400 hover:bg-[#3C4AB8] hover:text-white"
-              }`}
-            >
-              <div className="mr-2">
-                <CreditCardIcon className="h-5 w-5" />
-              </div>
-              <div>
-                <p>Reportes</p>
-              </div>
-            </div>
-          </Link>
-
-          {showMenu && (
-            <div className="grid  py-1 pr-4 mx-5 justify-end rounded">
-              <Link href="/reportes">
-                <div>de ventas</div>
-              </Link>
-              <div>de compras</div>
-              <div>de gastos</div>
-              <div>de clientes</div>
-            </div>
-          )}
-        </div>
-
+ 
          
       </div>
     </div>
