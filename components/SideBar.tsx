@@ -36,7 +36,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
         </picture>
       </div>
 
-      <div className="flex flex-col z-20 ">
+      <div className="flex flex-col -z-40 ">
          
        
 
