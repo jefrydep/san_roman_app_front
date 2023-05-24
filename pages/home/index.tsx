@@ -5,17 +5,9 @@ import { UserIcon, UserPlusIcon } from "@heroicons/react/24/solid";
 import axios from "axios";
 import { Formik, Field, Form } from "formik";
 import { url } from "inspector";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-// import { useSession } from "next-auth/client";
-
 
 export default function Home() {
-  
-  // const router = useRouter();
-  const session= useSession();
-  console.log(session)
   return (
     <>
       <Layout>
