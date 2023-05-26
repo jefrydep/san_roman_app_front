@@ -14,8 +14,8 @@ import { useEffect, useState } from "react";
 export default function Home() {
   
   // const router = useRouter();
-  const session= useSession();
-  console.log(session)
+  // const session= useSession();
+  // console.log(session)
   return (
     <>
       <Layout>

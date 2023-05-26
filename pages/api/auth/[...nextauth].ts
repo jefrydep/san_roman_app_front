@@ -1,8 +1,12 @@
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { TbPlaceholder } from "react-icons/tb";
-const handler = NextAuth({
+ export default   NextAuth({
   providers: [
+    // GithubProvider({
+    //   clientId: process.env.GITHUB_ID,
+    //   clientSecret: process.env.GITHUB_SECRET,
+    // }),
     CredentialsProvider({
       // The name to display on the sign in form (e.g. "Sign in with...")
       name: "Credentials",
@@ -11,12 +15,13 @@ const handler = NextAuth({
       // e.g. domain, username, password, 2FA token, etc.
       // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
-        documentNumber: { label: "DNI", type: "text", placeholder: "75061974" },
+        email: { label: "Correo", type: "text", placeholder: "jefrydep@gmail.com" },
         password: {
           label: "Password",
           type: "password",
           placeholder: "************",
         },
+         
       },
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
@@ -39,6 +44,7 @@ const handler = NextAuth({
         // } else {
         //   // If you return null then an error will be displayed advising the user to check their details.
           return null;
+          // return {name:'Jefry',correo:'jefrydep@gmail.com',role:'admin'}
 
         //   // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
         // }
@@ -46,15 +52,47 @@ const handler = NextAuth({
     }),
   ],
   callbacks: {
-    async jwt({ token, user }) {
-      return { ...token, ...user };
-    },
+    // async jwt({ token, account }) {
+    //   // Persist the OAuth access_token to the token right after signin
+    //   if (account) {
+    //     token.accessToken = account.access_token
+    //   }
+    //   return token
+    // },
+    async jwt({ token,account, user }) {
+      if( account ){
+        token.accessToken = account.access_token;
+        switch(account.type){
 
-    async session({ session, token, user }) {
-      session.user = token as any;
-      return session;
+
+          case 'oauth':
+            // Todo:crear usuario o verificar si existe en mi db
+            break;
+          case 'credentials':
+            token.user = user;
+            break;
+        }
+      }
+      return { ...token,account, ...user };
     },
+    // async session({ session, token, user }) {
+    //   // Send properties to the client, like an access_token from a provider.
+    //   session.accessToken = token.accessToken
+    //   return session
+    // }
+
+    // async session ({ session, token, user }) {
+    //   // console.log({session,token,user})
+    //   session.accessToken = token.accessToken;
+    //   session.user=token.user as any;
+      
+    //   return session;
+    // },
   },
 });
 
-export { handler as GET, handler as POST };
+
+// function GithubProvider(arg0: { clientId: string | undefined; clientSecret: string | undefined; }): import("next-auth/providers").Provider {
+//   throw new Error("Function not implemented.");
+// }
+// export { handler as GET, handler as POST };
