@@ -9,8 +9,12 @@ import {
 import { BellIcon, CheckIcon } from "@heroicons/react/24/outline";
 import { Menu, Transition, Popover } from "@headlessui/react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
-export default function TopBar({ showNav, setShowNav }:any) {
+export default function TopBar({ showNav, setShowNav }: any) {
+  const { data: session } = useSession();
+  console.log(session)
+  // console.log(data)
   return (
     <div
       className={`fixed w-full h-16 flex  bg-[#17286B] justify-between items-center transition-all duration-[400ms] ${
@@ -18,21 +22,17 @@ export default function TopBar({ showNav, setShowNav }:any) {
       }`}
     >
       <div className="pl-4   flex  items-center flex-row md:pl-16 ">
-        <Bars3CenterLeftIcon width={60}
-        
+        <Bars3CenterLeftIcon
+          width={60}
           className="    text-white cursor-pointer"
           onClick={() => setShowNav(!showNav)}
         />
-        <div className="mx-4 font-bold text-white ">
-         Jefrydep@gmail.com
-        </div>
-        
+        <div className="mx-4 font-bold text-white ">Jefrydep@gmail.com</div>
       </div>
       <div className="flex items-center pr-4 md:pr-16">
         <Popover className="relative">
           <Popover.Button className="outline-none mr-5 md:mr-8 cursor-pointer text-gray-700">
             <BellIcon className="h-6 w-6" />
-         
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -111,6 +111,9 @@ export default function TopBar({ showNav, setShowNav }:any) {
         </Popover>
         <Menu as="div" className="relative inline-block text-left">
           <div>
+            {
+              session?.user && 
+
             <Menu.Button className="inline-flex w-full justify-center items-center">
               <picture>
                 <img
@@ -120,10 +123,12 @@ export default function TopBar({ showNav, setShowNav }:any) {
                 />
               </picture>
               <span className="hidden md:block font-medium text-gray-700">
-            Jefry
+              {session.user.name || "Godofredo"}
               </span>
               <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-700" />
             </Menu.Button>
+               
+            }
           </div>
           <Transition
             as={Fragment}

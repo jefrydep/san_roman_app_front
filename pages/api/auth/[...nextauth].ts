@@ -15,7 +15,7 @@ import { TbPlaceholder } from "react-icons/tb";
       // e.g. domain, username, password, 2FA token, etc.
       // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
-        email: { label: "Correo", type: "text", placeholder: "jefrydep@gmail.com" },
+        documentNumber: { label: "DoCumentNumber", type: "text", placeholder: "45784578@gmail.com" },
         password: {
           label: "Password",
           type: "password",
@@ -25,25 +25,24 @@ import { TbPlaceholder } from "react-icons/tb";
       },
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
-        // const res = await fetch("http://localhost:3000/api/auth/login", {
-        //   method: "POST",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify({
-        //     username: credentials?.documentNumber,
-        //     password: credentials?.password,
-        //   }),
-        // });
+        const {documentNumber,password} = credentials as any;
+        const res = await fetch("http://localhost:3000/api/auth/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            documentNumber,
+            password,
+          }),
+        });
         console.log({credentials});
-        // const user = await res.json();
-        // const { documentNumber,password} = credentials;
-        // if (documentNumber) {
-        //   // Any object returned will be saved in `user` property of the JWT
-        //   return documentNumber;
-        // } else {
-        //   // If you return null then an error will be displayed advising the user to check their details.
-          return null;
+        const user = await res.json();
+        console.log(user)
+        if (res.ok && user){
+          return user;
+        }else return null;
+
           // return {name:'Jefry',correo:'jefrydep@gmail.com',role:'admin'}
 
         //   // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
@@ -51,44 +50,53 @@ import { TbPlaceholder } from "react-icons/tb";
       },
     }),
   ],
-  callbacks: {
-    // async jwt({ token, account }) {
-    //   // Persist the OAuth access_token to the token right after signin
-    //   if (account) {
-    //     token.accessToken = account.access_token
-    //   }
-    //   return token
-    // },
-    async jwt({ token,account, user }) {
-      if( account ){
-        token.accessToken = account.access_token;
-        switch(account.type){
+  // callbacks: {
+  //   // async jwt({ token, account }) {
+  //   //   // Persist the OAuth access_token to the token right after signin
+  //   //   if (account) {
+  //   //     token.accessToken = account.access_token
+  //   //   }
+  //   //   return token
+  //   // },
+  //   async jwt({ token,account, user }) {
+  //     if( account ){
+  //       token.accessToken = account.access_token;
+  //       switch(account.type){
 
 
-          case 'oauth':
-            // Todo:crear usuario o verificar si existe en mi db
-            break;
-          case 'credentials':
-            token.user = user;
-            break;
-        }
-      }
-      return { ...token,account, ...user };
-    },
-    // async session({ session, token, user }) {
-    //   // Send properties to the client, like an access_token from a provider.
-    //   session.accessToken = token.accessToken
-    //   return session
-    // }
+  //         case 'oauth':
+  //           // Todo:crear usuario o verificar si existe en mi db
+  //           break;
+  //         case 'credentials':
+  //           token.user = user;
+  //           break;
+  //       }
+  //     }
+  //     return { ...token,account, ...user };
+  //   },
+  //   // async session({ session, token, user }) {
+  //   //   // Send properties to the client, like an access_token from a provider.
+  //   //   session.accessToken = token.accessToken
+  //   //   return session
+  //   // }
 
-    // async session ({ session, token, user }) {
-    //   // console.log({session,token,user})
-    //   session.accessToken = token.accessToken;
-    //   session.user=token.user as any;
+  //   async session ({ session, token, user }) {
+  //     // console.log({session,token,user})
+  //     session.accessToken = token.accessToken;
+  //     session.user=token.user as any;
       
-    //   return session;
-    // },
+  //     return session;
+  //   },
+  // },
+
+  session:{
+    strategy:"jwt" 
   },
+  pages:{
+    signIn:"/login",
+   
+
+  }
 });
 
 

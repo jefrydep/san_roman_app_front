@@ -3,9 +3,11 @@ import type { AppProps } from "next/app";
 import LoginPage from "./login";
 import { useContext, useState } from "react";
 import { SessionProvider } from "next-auth/react";
-import { AuthProvider } from "@/context/auth/AuthProvider";
+// import { AuthProvider } from "@/context/auth/AuthProvider";
 
-export default function App({ Component, pageProps }: AppProps) {
+interface Iprops{
+}
+export default function App({ Component, pageProps:{session,...pageProps},  }: AppProps) {
   // const { isLoggedIn, user } = useContext(AuthContext)
   // const [isLogged, seTisLogged] = useState(true)
 
@@ -14,10 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
   //   }
 
   return (
-    <SessionProvider>
-      <AuthProvider>
+    <SessionProvider session={session}>
+      {/* <AuthProvider> */}
         <Component {...pageProps} />
-      </AuthProvider>
+      {/* </AuthProvider> */}
     </SessionProvider>
   );
 }
