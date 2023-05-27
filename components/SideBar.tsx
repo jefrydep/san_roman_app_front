@@ -27,7 +27,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
     <div
 
       ref={ref}
-      className=" overflow-y-auto fixed w-56 h-full scroll-smooth border bg-[#17286B]  shadow-sm"
+      className=" overflow-y-auto fixed z-50 w-56 h-full scroll-smooth border bg-[#17286B]  shadow-sm"
     >
       <div className="flex justify-center mt-6 mb-14">
         <picture className="bg-white rounded-full p-6">
