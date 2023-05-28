@@ -117,12 +117,12 @@ const dataCreditos = [
 ];
 export default function Home() {
   // const router = useRouter();
-  const session = useSession();
+  const {data:session} = useSession();
   console.log(session);
   return (
     <>
       <Layout>
-         <HeadContent title="Inmobiliaria palomino " totalTitle="Total de Lotes" total="235" availableTitle="Lotes disponibles" available="289" secondTitle="Listado de Creditos" >
+         <HeadContent title={`Bienvenido ${session?.user?.name}`} totalTitle="Total de Lotes" total="235" availableTitle="Lotes disponibles" available="289" secondTitle="Listado de Creditos" >
 
 
          <div className="flex flex-col  mb-3 gap-4">

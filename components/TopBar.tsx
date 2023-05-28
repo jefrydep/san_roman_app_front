@@ -9,7 +9,10 @@ import {
 import { BellIcon, CheckIcon } from "@heroicons/react/24/outline";
 import { Menu, Transition, Popover } from "@headlessui/react";
 import Link from "next/link";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+import { LoginResponse } from "@/interfaces/loginResponse";
+import { data } from "autoprefixer";
+
 
 export default function TopBar({ showNav, setShowNav }: any) {
   const { data: session } = useSession();
@@ -17,7 +20,7 @@ export default function TopBar({ showNav, setShowNav }: any) {
   // console.log(data)
   return (
     <div
-      className={`fixed w-full h-16 flex  bg-[#17286B] justify-between items-center transition-all duration-[400ms] ${
+      className={`fixed w-full h-16 flex rounded-full bg-[#17286B] justify-between items-center transition-all duration-[400ms] ${
         showNav ? "pl-52" : ""
       }`}
     >
@@ -122,10 +125,10 @@ export default function TopBar({ showNav, setShowNav }: any) {
                   alt="profile picture"
                 />
               </picture>
-              <span className="hidden md:block font-medium text-gray-700">
-              {session.user.name || "Godofredo"}
+              <span className="hidden md:block font-medium text-white">
+              {session.user.name}
               </span>
-              <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-700" />
+              <ChevronDownIcon className="ml-2 h-4 w-4 text-white" />
             </Menu.Button>
                
             }
@@ -152,11 +155,12 @@ export default function TopBar({ showNav, setShowNav }: any) {
                 </Menu.Item>
                 <Menu.Item>
                   <Link
-                    href="#"
+                  onClick={()=>signOut()}
+                    href="/login"
                     className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
                   >
                     <CreditCardIcon className="h-4 w-4 mr-2" />
-                    Billing
+                    Logout
                   </Link>
                 </Menu.Item>
                 <Menu.Item>

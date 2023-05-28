@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { AuthContext } from "@/context/auth";
+import { data } from "autoprefixer";
 import axios from "axios";
 import { Field, Form, Formik } from "formik";
 import { Session } from "inspector";
@@ -14,7 +15,7 @@ const LoginPage = () => {
   // console.log(userName.current)
   // console.log(pass.current)
   const router = useRouter();
-  const {data:session,status}= useSession();
+  const { data: session, status, update } = useSession();
   // const { loginUser } = useContext(AuthContext);
 
   // const URL = "http://localhost:3000/api/auth/";
@@ -27,14 +28,18 @@ const LoginPage = () => {
     // values: MyFormValues
     // { resetform }: any
     {
-      console.log({documentNumber,password})
+      console.log({ documentNumber, password });
       const result = await signIn("credentials", {
-        documentNumber:userName.current,
-        password:pass.current,
+        documentNumber,
+        password,
         redirect: true,
         callbackUrl: "/",
       });
-
+      if (result?.error) {
+        console.log(result.error);
+      } else {
+        update( )
+      }
       return result;
 
       // resetform();
