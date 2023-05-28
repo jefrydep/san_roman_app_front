@@ -25,11 +25,16 @@ const usuarios = () => {
   }, []);
   console.log(users);
   interface MyFormValues {
-    userName: string;
-    dni: string;
+    name: string;
+    documentNumber: string;
     password: string;
   }
-  const onSubmit = ({ userName, dni, password }: MyFormValues) =>
+
+  const activesUsers = users.filter(
+    (user: UsersResponse) => user.isActive === true
+  );
+
+  const onSubmit = async ({ name, documentNumber, password }: MyFormValues) =>
     // values: MyFormValues
     // { resetform }: any
 
@@ -38,7 +43,14 @@ const usuarios = () => {
       // if( values  isEmpt)return;
 
       setShowModal(false);
-      console.log({ userName, dni, password });
+      console.log({ name, documentNumber, password });
+      await axios.post("http://localhost:3000/api/auth/register/", {
+        name,
+        documentNumber,
+        password,
+      });
+      getAllUser()
+
       // console.log({ values });
     };
   return (
@@ -53,14 +65,14 @@ const usuarios = () => {
               <UserIcon className="h-12 p-2  bg-orange-400 rounded-full" />
               <div>
                 <h2 className="text-gray-400">Total de usuarios</h2>
-                <div className="text-orange-400">45</div>
+                <div className="text-orange-400">{users.length}</div>
               </div>
             </div>
             <div className=" items-center px-3 py-3 rounded-lg text-center flex  gap-3 shadow-md mr-4  text-white font-bold text-lg">
               <UserPlusIcon className="h-12 p-2  bg-green-400 rounded-full" />
               <div>
-                <h2 className="text-gray-400">Total de usuarios</h2>
-                <div className="text-orange-400">45</div>
+                <h2 className="text-gray-400">Total de usuarios activos</h2>
+                <div className="text-orange-400">{activesUsers.length}</div>
               </div>
             </div>
           </div>
@@ -87,8 +99,8 @@ const usuarios = () => {
                 <h3>Crear Usuario</h3>
                 <Formik
                   initialValues={{
-                    userName: "",
-                    dni: "",
+                    name: "",
+                    documentNumber: "",
                     password: "",
                   }}
                   onSubmit={onSubmit}
@@ -100,7 +112,7 @@ const usuarios = () => {
                     <Field
                       className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       type="text"
-                      name="userName"
+                      name="name"
                       placeholder="Jefry Palomino"
                     />
                     <label className="block text-start text-gray-700 text-sm font-bold mb-2">
@@ -109,7 +121,7 @@ const usuarios = () => {
                     <Field
                       className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       type="text"
-                      name="dni"
+                      name="documentNumber"
                       placeholder="78459865"
                     />
                     <label className="block text-start text-gray-700 text-sm font-bold mb-2">
@@ -121,27 +133,6 @@ const usuarios = () => {
                       name="password"
                       placeholder="************"
                     />
-                    {/* <input
-                className="shadow appearance-none border rounded w-full sm:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                type="text"
-                placeholder="Jefry Palomino"
-              /> */}
-                    {/* <label className="block text-start text-gray-700 text-sm font-bold mb-2">
-                    Dni
-                  </label>
-                  <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="text"
-                  placeholder="75894565"
-                  />
-                  <label className="block text-start text-gray-700 text-sm font-bold mb-2">
-                  Contraseña
-                  </label>
-                  <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  type="password"
-                  placeholder="************"
-                /> */}
 
                     <div className="flex gap-4 justify-center mt-4">
                       <button
@@ -170,66 +161,21 @@ const usuarios = () => {
           )}
 
           <form className=" " action="">
-            {/* {showModal && (
-            <div className="flex flex-col   items-center gap-2">
-            <input
-            className="px-3 py-1 rounded-2xl outline-none  w-64  "
-            type="text"
-            placeholder="Jefry Palomino"
-            />
-            <input
-            className="px-3 py-1 rounded-2xl outline-none  w-64  "
-            type="text"
-            placeholder="Jefry Palomino"
-              />
+            <div className="flex gap-2 flex-col sm:flex-row">
               <input
-                className="px-3 py-1 rounded-2xl outline-none  w-64  "
                 type="text"
-                placeholder="Jefry Palomino"
-                />
-                <input
-                className="px-3 py-1 rounded-2xl outline-none  w-64  "
-                type="text"
-                placeholder="Jefry Palomino"
-                />
-                <div>
-                <button
-                onClick={() => {
-                  setShowModal(false);
-                }}
-                className="bg-orange-400 rounded-2xl text-white font-bold px-3 mx-4"
-                >
-                Enviar
-                </button>
-                <button
-                onClick={() => {
-                  setShowModal(false);
-                }}
-                className="bg-orange-400 rounded-2xl text-white font-bold px-3 mx-4"
-                >
-                Cancelar
-                </button>
-                </div>
-                </div>
-              ) } */}
-
-          
-              <div className="flex gap-2 flex-col sm:flex-row">
-                <input
-                  type="text"
-                  placeholder="Buscar Por Dni"
-                  className="px-3 border text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"
-                />
-                <button className="border rounded-md px-6 hover:text-white hover:bg-slate-700 hover:font-bold">
-                  Buscar
-                </button>
-              </div>
-            
+                placeholder="Buscar Por Dni"
+                className="px-3 border text-gray-400 py-2 rounded-md outline-gray-400 shadow-sm"
+              />
+              <button className="border rounded-md px-6 hover:text-white hover:bg-slate-700 hover:font-bold">
+                Buscar
+              </button>
+            </div>
           </form>
         </div>
 
         <section>
-          <div className="grid grid-cols-3 sm:grid-cols-5 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
+          <div className="grid rounded-sm grid-cols-3 sm:grid-cols-5 content-center shadow-md  px-4 h-10 gap-3 text-white font-bold bg-[#1C5CFF]">
             <div className=" hidden sm:block ">
               <h2 className="">Id</h2>
             </div>
@@ -281,7 +227,7 @@ const usuarios = () => {
             <DescribeUser
               key={users.id}
               id={index + 1}
-              name={users.fullName}
+              name={users.name}
               state={users.isActive === true ? "Activo" : "Inactivo"}
               role={users.role[0]}
             />

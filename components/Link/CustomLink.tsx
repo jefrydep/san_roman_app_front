@@ -43,7 +43,7 @@ const CustomLink = ({ path, routerName,icon}: LinkProps) => {
             {/* <UserIcon className="h-5 w-5" /> */}
             {icon }
           </div>
-          <div>
+          <div className="text-white">
             <p>{routerName}</p>
           </div>
 

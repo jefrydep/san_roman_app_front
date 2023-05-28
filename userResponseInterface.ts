@@ -1,7 +1,7 @@
 export interface UsersResponse {
     id:             string;
     documentNumber: string;
-    fullName:       string;
+    name:       string;
     isActive:       boolean;
     role:           Role[];
 }

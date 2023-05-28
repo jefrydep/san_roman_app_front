@@ -41,7 +41,7 @@ const SideBar = forwardRef(({ showNav }: any, ref: any) => {
        
 
        <CustomLink path="/" routerName="Inicio" icon={<HiHome/>} />
-        <hr className="my-5" />
+        <hr className="my-5 bg-red-400" />
        <h4 className="text-white ml-6">SEGURIDAD</h4> 
        <CustomLink path="/seguridad/usuarios" routerName="Usuarios" icon={<HiHome/>} /> 
        <CustomLink path="/seguridad/permisos" routerName="Permisos" icon={<HiHome/>} /> 
