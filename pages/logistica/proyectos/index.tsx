@@ -1,8 +1,8 @@
 import Layout from "@/components/Layout";
 import TableHead from "@/components/ui/table/TableHead";
  
-import DescribeUser from "@/components/users/DescribeUser";
-import { UsersResponse } from "@/userResponseInterface";
+import DescribeUser from "@/components/users/UserItem";
+import { UsersResponse } from "@/interfaces/userResponseInterface";
 import { UserIcon, UserPlusIcon } from "@heroicons/react/24/solid";
 import axios from "axios";
 import { Formik, Field, Form } from "formik";

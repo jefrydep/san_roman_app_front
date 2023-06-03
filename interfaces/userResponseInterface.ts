@@ -9,3 +9,4 @@ export interface UsersResponse {
 export enum Role {
     User = "user",
 }
+// export type CreateUser = Omit<>
